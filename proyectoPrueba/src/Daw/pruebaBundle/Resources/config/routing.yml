@@ -1,6 +1,0 @@
-prueba: 
-    path:   /hola/{nombre}
-    defaults: { _controller: DawpruebaBundle:Default:hola }
-dawprueba_homepage:
-    path:     /
-    defaults: { _controller: DawpruebaBundle:Default:index }

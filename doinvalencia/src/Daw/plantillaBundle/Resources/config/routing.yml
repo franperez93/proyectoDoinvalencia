@@ -1,0 +1,3 @@
+dawplantilla_homepage:
+    path:     /prueba
+    defaults: { _controller: DawplantillaBundle:Default:index }
