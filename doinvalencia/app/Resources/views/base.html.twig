@@ -6,12 +6,22 @@
         
         <meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1.0 maximum-scale=1.0, minimum-scale=1.0">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-        <link rel="stylesheet" href="bundles/dawplantilla/css/estilo.css" type="text/css" />
-        
+       
         {% block stylesheets %}{% endblock %}
+        
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
+    
     <body>
+         <!--Aqui tenemos el jumbotron de la pagina web-->
+        <section class="jumbotron">
+            <div class="container">
+                <h1>DoInValencia</h1>
+                <p>Eventos que podemos encontrar en la provincia de valencia i alrededores</p>
+            </div>
+        </section>
+    
+        <!--Aqui se encuntra la barra de navegacion-->
         <header>
         <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
             <div class="container">
@@ -52,7 +62,29 @@
             </div>
         </nav>    
     </header>
+    
         {% block body %}{% endblock %}
+        
+         <!-- Footer de la pagina web-->
+        <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-6">
+                    <p>Esto es el footer de la web</p> 
+                </div>
+                <div class="col-xs-6">
+                    <ul class="list-inline text-right lista-footer">
+                        <li><a href="#">prueba 1</a></li>
+                        <li><a href="#">prueba 2</a></li>
+                        <li><a href="#">prueba 3</a></li>
+                    </ul> 
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
         {% block javascripts %}{% endblock %}
     </body>
 </html>
