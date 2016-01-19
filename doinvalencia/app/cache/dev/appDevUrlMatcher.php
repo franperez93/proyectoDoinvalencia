@@ -106,7 +106,7 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         }
 
         // dawplantilla_homepage
-        if ($pathinfo === '/prueba') {
+        if ($pathinfo === '/home') {
             return array (  '_controller' => 'Daw\\plantillaBundle\\Controller\\DefaultController::indexAction',  '_route' => 'dawplantilla_homepage',);
         }
 

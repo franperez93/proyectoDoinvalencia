@@ -1,5 +1,5 @@
 dawplantilla_homepage:
-    path:     /prueba
+    path:     /home
     defaults: { _controller: DawplantillaBundle:Default:index }
     
 prueba_homepage:    
