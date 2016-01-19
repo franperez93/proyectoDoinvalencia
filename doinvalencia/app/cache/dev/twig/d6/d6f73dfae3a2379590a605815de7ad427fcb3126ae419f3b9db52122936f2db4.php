@@ -24,49 +24,91 @@ class __TwigTemplate_e9d9b46293b3cc611e38b7aa5bf83b32b52e2df69b17ec9c59f5d75cedb
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_23b4311220efafab3070ae00e92512a5123c7f01b60deda93e3a39a44810f56e = $this->env->getExtension("native_profiler");
-        $__internal_23b4311220efafab3070ae00e92512a5123c7f01b60deda93e3a39a44810f56e->enter($__internal_23b4311220efafab3070ae00e92512a5123c7f01b60deda93e3a39a44810f56e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "DawplantillaBundle:Default:evento.html.twig"));
+        $__internal_59d29e6d55bfb6cf09138b6efe3523726e26824529c2058f59cb57b4523a2c1b = $this->env->getExtension("native_profiler");
+        $__internal_59d29e6d55bfb6cf09138b6efe3523726e26824529c2058f59cb57b4523a2c1b->enter($__internal_59d29e6d55bfb6cf09138b6efe3523726e26824529c2058f59cb57b4523a2c1b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "DawplantillaBundle:Default:evento.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_23b4311220efafab3070ae00e92512a5123c7f01b60deda93e3a39a44810f56e->leave($__internal_23b4311220efafab3070ae00e92512a5123c7f01b60deda93e3a39a44810f56e_prof);
+        $__internal_59d29e6d55bfb6cf09138b6efe3523726e26824529c2058f59cb57b4523a2c1b->leave($__internal_59d29e6d55bfb6cf09138b6efe3523726e26824529c2058f59cb57b4523a2c1b_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_6b17742d84cd972c9a444856c5940311b35e116f56cfaefe3a106ac14941093a = $this->env->getExtension("native_profiler");
-        $__internal_6b17742d84cd972c9a444856c5940311b35e116f56cfaefe3a106ac14941093a->enter($__internal_6b17742d84cd972c9a444856c5940311b35e116f56cfaefe3a106ac14941093a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_f50563b3090db092c63919a84768d1402c836be852bda9a8190662281f34b1da = $this->env->getExtension("native_profiler");
+        $__internal_f50563b3090db092c63919a84768d1402c836be852bda9a8190662281f34b1da->enter($__internal_f50563b3090db092c63919a84768d1402c836be852bda9a8190662281f34b1da_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "Pagina principal de DoInValencia";
         
-        $__internal_6b17742d84cd972c9a444856c5940311b35e116f56cfaefe3a106ac14941093a->leave($__internal_6b17742d84cd972c9a444856c5940311b35e116f56cfaefe3a106ac14941093a_prof);
+        $__internal_f50563b3090db092c63919a84768d1402c836be852bda9a8190662281f34b1da->leave($__internal_f50563b3090db092c63919a84768d1402c836be852bda9a8190662281f34b1da_prof);
 
     }
 
     // line 4
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_0bcab8d3167d00f28d03088debe626e14a573780d5e7e27b8f05f8c9113fc9bf = $this->env->getExtension("native_profiler");
-        $__internal_0bcab8d3167d00f28d03088debe626e14a573780d5e7e27b8f05f8c9113fc9bf->enter($__internal_0bcab8d3167d00f28d03088debe626e14a573780d5e7e27b8f05f8c9113fc9bf_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_494f1e62d21e3f5ff216e07f89b6ef5608c1493c1e9557ea43dab00e6d82b0d6 = $this->env->getExtension("native_profiler");
+        $__internal_494f1e62d21e3f5ff216e07f89b6ef5608c1493c1e9557ea43dab00e6d82b0d6->enter($__internal_494f1e62d21e3f5ff216e07f89b6ef5608c1493c1e9557ea43dab00e6d82b0d6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         echo "<link rel=\"stylesheet\" href=\"";
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("bundles/dawplantilla/css/estilo.css"), "html", null, true);
         echo "\" type=\"text/css\" />";
         
-        $__internal_0bcab8d3167d00f28d03088debe626e14a573780d5e7e27b8f05f8c9113fc9bf->leave($__internal_0bcab8d3167d00f28d03088debe626e14a573780d5e7e27b8f05f8c9113fc9bf_prof);
+        $__internal_494f1e62d21e3f5ff216e07f89b6ef5608c1493c1e9557ea43dab00e6d82b0d6->leave($__internal_494f1e62d21e3f5ff216e07f89b6ef5608c1493c1e9557ea43dab00e6d82b0d6_prof);
 
     }
 
     // line 6
     public function block_body($context, array $blocks = array())
     {
-        $__internal_44c1b3925cffd02729c5676f3f82527b2590a36c56c0cb39ce1928c1f279e6e3 = $this->env->getExtension("native_profiler");
-        $__internal_44c1b3925cffd02729c5676f3f82527b2590a36c56c0cb39ce1928c1f279e6e3->enter($__internal_44c1b3925cffd02729c5676f3f82527b2590a36c56c0cb39ce1928c1f279e6e3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_3988041584d09666b0950c9e84d9b84fdbb1703da2b98803170a7018620b72ab = $this->env->getExtension("native_profiler");
+        $__internal_3988041584d09666b0950c9e84d9b84fdbb1703da2b98803170a7018620b72ab->enter($__internal_3988041584d09666b0950c9e84d9b84fdbb1703da2b98803170a7018620b72ab_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 7
-        echo "   <section class=\"main container\">
+        echo "
+    <section class=\"container\">
+        <div class=\"row\">
+            <div class=\"col-md-12\">
+                <div class=\"carousel slide\" id=\"home-carousel\" data-ride=\"carousel\">
+                    <div class=\"carousel-inner\">
+                        <div class=\"item active\">
+                            <img src=\"";
+        // line 14
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("bundles/dawplantilla/images/pruebas/image1.jpg"), "html", null, true);
+        echo "\" alt=\"image1\" />
+                        </div>
+                        <div class=\"item\"> 
+                            <img src=\"";
+        // line 17
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("bundles/dawplantilla/images/pruebas/image2.jpg"), "html", null, true);
+        echo "\" alt=\"image2\" />
+                            <div class=\"carousel-caption\">
+                              <h3>Chania</h3>
+                              <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
+                            </div>
+                        </div>
+                        <div class=\"item\">
+                            <img src=\"";
+        // line 24
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("bundles/dawplantilla/images/pruebas/image3.jpg"), "html", null, true);
+        echo "\" alt=\"image3\" />
+                        </div>
+                        <div class=\"item\">  
+                            <img src=\"";
+        // line 27
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("bundles/dawplantilla/images/pruebas/image4.jpg"), "html", null, true);
+        echo "\" alt=\"image4\" />
+                        </div>
+                    </div>
+                    <a class=\"carousel-control left\" href=\"#home-carousel\" data-slide=\"prev\"><span class=\"glyphicon glyphicon-chevron-left\"></a>
+                    <a class=\"carousel-control right\" href=\"#home-carousel\" data-slide=\"next\"><span class=\"glyphicon glyphicon-chevron-right\"></a>
+                </div>
+            </div>    
+        </div>
+    </section>
+    
+    <section class=\"main container\">
         <div class=\"row\">
             <!--Seccion principal-->
             <section class=\"posts col-md-9\">
@@ -81,8 +123,8 @@ class __TwigTemplate_e9d9b46293b3cc611e38b7aa5bf83b32b52e2df69b17ec9c59f5d75cedb
                 <article class=\"post clearfix\">
                     <a href=\"#\" class=\"thumb pull-left\">
                         <img class=\"img-thumbnail imagen\" src=\"";
-        // line 21
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("bundles/dawplantilla/images/bootstrap.png"), "html", null, true);
+        // line 51
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("bundles/dawplantilla/images/pruebas/bootstrap.png"), "html", null, true);
         echo "\"></img>
                     </a>
                     <h2 class=\"post-tittle\">
@@ -103,8 +145,8 @@ class __TwigTemplate_e9d9b46293b3cc611e38b7aa5bf83b32b52e2df69b17ec9c59f5d75cedb
                 <article class=\"post clearfix\">
                     <a href=\"#\" class=\"thumb pull-left\">
                         <img class=\"img-thumbnail imagen\" src=\"";
-        // line 40
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("bundles/dawplantilla/images/html.png"), "html", null, true);
+        // line 70
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("bundles/dawplantilla/images/pruebas/html.png"), "html", null, true);
         echo "\"></img>
                     </a>
                     <h2 class=\"post-tittle\">
@@ -161,18 +203,18 @@ class __TwigTemplate_e9d9b46293b3cc611e38b7aa5bf83b32b52e2df69b17ec9c59f5d75cedb
     </section>
 ";
         
-        $__internal_44c1b3925cffd02729c5676f3f82527b2590a36c56c0cb39ce1928c1f279e6e3->leave($__internal_44c1b3925cffd02729c5676f3f82527b2590a36c56c0cb39ce1928c1f279e6e3_prof);
+        $__internal_3988041584d09666b0950c9e84d9b84fdbb1703da2b98803170a7018620b72ab->leave($__internal_3988041584d09666b0950c9e84d9b84fdbb1703da2b98803170a7018620b72ab_prof);
 
     }
 
-    // line 97
+    // line 127
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_30c660c7d8164d3d781c804f3cde634a83e0d3732da0a9447571236b73fc0756 = $this->env->getExtension("native_profiler");
-        $__internal_30c660c7d8164d3d781c804f3cde634a83e0d3732da0a9447571236b73fc0756->enter($__internal_30c660c7d8164d3d781c804f3cde634a83e0d3732da0a9447571236b73fc0756_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_473f2c23254f8d35813d231b1226e6d5b758f49fd56271015fbbeeb767f2d43e = $this->env->getExtension("native_profiler");
+        $__internal_473f2c23254f8d35813d231b1226e6d5b758f49fd56271015fbbeeb767f2d43e->enter($__internal_473f2c23254f8d35813d231b1226e6d5b758f49fd56271015fbbeeb767f2d43e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
         
-        $__internal_30c660c7d8164d3d781c804f3cde634a83e0d3732da0a9447571236b73fc0756->leave($__internal_30c660c7d8164d3d781c804f3cde634a83e0d3732da0a9447571236b73fc0756_prof);
+        $__internal_473f2c23254f8d35813d231b1226e6d5b758f49fd56271015fbbeeb767f2d43e->leave($__internal_473f2c23254f8d35813d231b1226e6d5b758f49fd56271015fbbeeb767f2d43e_prof);
 
     }
 
@@ -188,7 +230,7 @@ class __TwigTemplate_e9d9b46293b3cc611e38b7aa5bf83b32b52e2df69b17ec9c59f5d75cedb
 
     public function getDebugInfo()
     {
-        return array (  169 => 97,  107 => 40,  85 => 21,  69 => 7,  63 => 6,  49 => 4,  37 => 3,  11 => 1,);
+        return array (  211 => 127,  149 => 70,  127 => 51,  100 => 27,  94 => 24,  84 => 17,  78 => 14,  69 => 7,  63 => 6,  49 => 4,  37 => 3,  11 => 1,);
     }
 }
 /* {% extends "::base.html.twig" %}*/
@@ -197,7 +239,37 @@ class __TwigTemplate_e9d9b46293b3cc611e38b7aa5bf83b32b52e2df69b17ec9c59f5d75cedb
 /* {% block stylesheets %}<link rel="stylesheet" href="{{asset('bundles/dawplantilla/css/estilo.css')}}" type="text/css" />{% endblock %}*/
 /* */
 /* {% block body %}*/
-/*    <section class="main container">*/
+/* */
+/*     <section class="container">*/
+/*         <div class="row">*/
+/*             <div class="col-md-12">*/
+/*                 <div class="carousel slide" id="home-carousel" data-ride="carousel">*/
+/*                     <div class="carousel-inner">*/
+/*                         <div class="item active">*/
+/*                             <img src="{{asset('bundles/dawplantilla/images/pruebas/image1.jpg')}}" alt="image1" />*/
+/*                         </div>*/
+/*                         <div class="item"> */
+/*                             <img src="{{asset('bundles/dawplantilla/images/pruebas/image2.jpg')}}" alt="image2" />*/
+/*                             <div class="carousel-caption">*/
+/*                               <h3>Chania</h3>*/
+/*                               <p>The atmosphere in Chania has a touch of Florence and Venice.</p>*/
+/*                             </div>*/
+/*                         </div>*/
+/*                         <div class="item">*/
+/*                             <img src="{{asset('bundles/dawplantilla/images/pruebas/image3.jpg')}}" alt="image3" />*/
+/*                         </div>*/
+/*                         <div class="item">  */
+/*                             <img src="{{asset('bundles/dawplantilla/images/pruebas/image4.jpg')}}" alt="image4" />*/
+/*                         </div>*/
+/*                     </div>*/
+/*                     <a class="carousel-control left" href="#home-carousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></a>*/
+/*                     <a class="carousel-control right" href="#home-carousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></a>*/
+/*                 </div>*/
+/*             </div>    */
+/*         </div>*/
+/*     </section>*/
+/*     */
+/*     <section class="main container">*/
 /*         <div class="row">*/
 /*             <!--Seccion principal-->*/
 /*             <section class="posts col-md-9">*/
@@ -211,7 +283,7 @@ class __TwigTemplate_e9d9b46293b3cc611e38b7aa5bf83b32b52e2df69b17ec9c59f5d75cedb
 /*                 <!-- Articulo 1-->*/
 /*                 <article class="post clearfix">*/
 /*                     <a href="#" class="thumb pull-left">*/
-/*                         <img class="img-thumbnail imagen" src="{{asset('bundles/dawplantilla/images/bootstrap.png')}}"></img>*/
+/*                         <img class="img-thumbnail imagen" src="{{asset('bundles/dawplantilla/images/pruebas/bootstrap.png')}}"></img>*/
 /*                     </a>*/
 /*                     <h2 class="post-tittle">*/
 /*                         <a href="#">Titulo de ejemplo</a>*/
@@ -230,7 +302,7 @@ class __TwigTemplate_e9d9b46293b3cc611e38b7aa5bf83b32b52e2df69b17ec9c59f5d75cedb
 /*                  <!-- Articulo 2-->*/
 /*                 <article class="post clearfix">*/
 /*                     <a href="#" class="thumb pull-left">*/
-/*                         <img class="img-thumbnail imagen" src="{{asset('bundles/dawplantilla/images/html.png')}}"></img>*/
+/*                         <img class="img-thumbnail imagen" src="{{asset('bundles/dawplantilla/images/pruebas/html.png')}}"></img>*/
 /*                     </a>*/
 /*                     <h2 class="post-tittle">*/
 /*                         <a href="#">Titulo de ejemplo 2</a>*/

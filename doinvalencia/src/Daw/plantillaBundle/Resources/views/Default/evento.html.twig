@@ -4,7 +4,37 @@
 {% block stylesheets %}<link rel="stylesheet" href="{{asset('bundles/dawplantilla/css/estilo.css')}}" type="text/css" />{% endblock %}
 
 {% block body %}
-   <section class="main container">
+
+    <section class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="carousel slide" id="home-carousel" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <img src="{{asset('bundles/dawplantilla/images/pruebas/image1.jpg')}}" alt="image1" />
+                        </div>
+                        <div class="item"> 
+                            <img src="{{asset('bundles/dawplantilla/images/pruebas/image2.jpg')}}" alt="image2" />
+                            <div class="carousel-caption">
+                              <h3>Chania</h3>
+                              <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="{{asset('bundles/dawplantilla/images/pruebas/image3.jpg')}}" alt="image3" />
+                        </div>
+                        <div class="item">  
+                            <img src="{{asset('bundles/dawplantilla/images/pruebas/image4.jpg')}}" alt="image4" />
+                        </div>
+                    </div>
+                    <a class="carousel-control left" href="#home-carousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></a>
+                    <a class="carousel-control right" href="#home-carousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></a>
+                </div>
+            </div>    
+        </div>
+    </section>
+    
+    <section class="main container">
         <div class="row">
             <!--Seccion principal-->
             <section class="posts col-md-9">
@@ -18,7 +48,7 @@
                 <!-- Articulo 1-->
                 <article class="post clearfix">
                     <a href="#" class="thumb pull-left">
-                        <img class="img-thumbnail imagen" src="{{asset('bundles/dawplantilla/images/bootstrap.png')}}"></img>
+                        <img class="img-thumbnail imagen" src="{{asset('bundles/dawplantilla/images/pruebas/bootstrap.png')}}"></img>
                     </a>
                     <h2 class="post-tittle">
                         <a href="#">Titulo de ejemplo</a>
@@ -37,7 +67,7 @@
                  <!-- Articulo 2-->
                 <article class="post clearfix">
                     <a href="#" class="thumb pull-left">
-                        <img class="img-thumbnail imagen" src="{{asset('bundles/dawplantilla/images/html.png')}}"></img>
+                        <img class="img-thumbnail imagen" src="{{asset('bundles/dawplantilla/images/pruebas/html.png')}}"></img>
                     </a>
                     <h2 class="post-tittle">
                         <a href="#">Titulo de ejemplo 2</a>

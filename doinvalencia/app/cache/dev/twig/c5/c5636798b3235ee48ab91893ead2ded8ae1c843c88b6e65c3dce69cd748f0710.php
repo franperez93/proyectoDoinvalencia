@@ -24,119 +24,98 @@ class __TwigTemplate_86cc6396635569795a638bed915f335151169964189c408d09fc3edd17c
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_295640345ad52cd7d99bf27f28597720c9188b1601b96080a2dffa0b2533667f = $this->env->getExtension("native_profiler");
-        $__internal_295640345ad52cd7d99bf27f28597720c9188b1601b96080a2dffa0b2533667f->enter($__internal_295640345ad52cd7d99bf27f28597720c9188b1601b96080a2dffa0b2533667f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "DawplantillaBundle:Default:index.html.twig"));
+        $__internal_ed3cfd11145bf147718c12366e843c9f264f009e8573aeef06c7ca3bbe96eb77 = $this->env->getExtension("native_profiler");
+        $__internal_ed3cfd11145bf147718c12366e843c9f264f009e8573aeef06c7ca3bbe96eb77->enter($__internal_ed3cfd11145bf147718c12366e843c9f264f009e8573aeef06c7ca3bbe96eb77_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "DawplantillaBundle:Default:index.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_295640345ad52cd7d99bf27f28597720c9188b1601b96080a2dffa0b2533667f->leave($__internal_295640345ad52cd7d99bf27f28597720c9188b1601b96080a2dffa0b2533667f_prof);
+        $__internal_ed3cfd11145bf147718c12366e843c9f264f009e8573aeef06c7ca3bbe96eb77->leave($__internal_ed3cfd11145bf147718c12366e843c9f264f009e8573aeef06c7ca3bbe96eb77_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_dfbee30b2d53685877cd25a4f6868ce5980769aa7d85fcb1db148169712da43d = $this->env->getExtension("native_profiler");
-        $__internal_dfbee30b2d53685877cd25a4f6868ce5980769aa7d85fcb1db148169712da43d->enter($__internal_dfbee30b2d53685877cd25a4f6868ce5980769aa7d85fcb1db148169712da43d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_57bf5b2512396762cab237b1ca87025400a5288f663cd3797f817354c3bf0eef = $this->env->getExtension("native_profiler");
+        $__internal_57bf5b2512396762cab237b1ca87025400a5288f663cd3797f817354c3bf0eef->enter($__internal_57bf5b2512396762cab237b1ca87025400a5288f663cd3797f817354c3bf0eef_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "Pagina principal de DoInValencia";
         
-        $__internal_dfbee30b2d53685877cd25a4f6868ce5980769aa7d85fcb1db148169712da43d->leave($__internal_dfbee30b2d53685877cd25a4f6868ce5980769aa7d85fcb1db148169712da43d_prof);
+        $__internal_57bf5b2512396762cab237b1ca87025400a5288f663cd3797f817354c3bf0eef->leave($__internal_57bf5b2512396762cab237b1ca87025400a5288f663cd3797f817354c3bf0eef_prof);
 
     }
 
     // line 4
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_8e7f1173ad3bc0cf1a42795e64b29d9a984feca4de88e52e89cee8adf73d3d96 = $this->env->getExtension("native_profiler");
-        $__internal_8e7f1173ad3bc0cf1a42795e64b29d9a984feca4de88e52e89cee8adf73d3d96->enter($__internal_8e7f1173ad3bc0cf1a42795e64b29d9a984feca4de88e52e89cee8adf73d3d96_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_7b12bc9127d5fa540a53cbbe27db5b0d8093be4f47e0af95ac2d3187ff7bfcf6 = $this->env->getExtension("native_profiler");
+        $__internal_7b12bc9127d5fa540a53cbbe27db5b0d8093be4f47e0af95ac2d3187ff7bfcf6->enter($__internal_7b12bc9127d5fa540a53cbbe27db5b0d8093be4f47e0af95ac2d3187ff7bfcf6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         echo "<link rel=\"stylesheet\" href=\"";
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("bundles/dawplantilla/css/estilo.css"), "html", null, true);
         echo "\" type=\"text/css\" />";
         
-        $__internal_8e7f1173ad3bc0cf1a42795e64b29d9a984feca4de88e52e89cee8adf73d3d96->leave($__internal_8e7f1173ad3bc0cf1a42795e64b29d9a984feca4de88e52e89cee8adf73d3d96_prof);
+        $__internal_7b12bc9127d5fa540a53cbbe27db5b0d8093be4f47e0af95ac2d3187ff7bfcf6->leave($__internal_7b12bc9127d5fa540a53cbbe27db5b0d8093be4f47e0af95ac2d3187ff7bfcf6_prof);
 
     }
 
     // line 6
     public function block_body($context, array $blocks = array())
     {
-        $__internal_fd3534f2544c51d5a7e67405ff2bac96256d3f488d8f082a74fdd13b08292d73 = $this->env->getExtension("native_profiler");
-        $__internal_fd3534f2544c51d5a7e67405ff2bac96256d3f488d8f082a74fdd13b08292d73->enter($__internal_fd3534f2544c51d5a7e67405ff2bac96256d3f488d8f082a74fdd13b08292d73_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_01948398b0c028e50d5f90aac7750cc1219ad8051a630cbd1a810213fb670bc9 = $this->env->getExtension("native_profiler");
+        $__internal_01948398b0c028e50d5f90aac7750cc1219ad8051a630cbd1a810213fb670bc9->enter($__internal_01948398b0c028e50d5f90aac7750cc1219ad8051a630cbd1a810213fb670bc9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 7
-        echo "    <!--Aqui se encuntra el contenido de ejemplo para la parte principal-->
+        echo "
+    
+    <!--Aqui se encuntra el contenido de ejemplo para la parte principal-->
     <section class=\"main container\">
         <div class=\"row\">
-            <!--Seccion principal-->
+            <!--Seccion principal -->
             <section class=\"posts col-md-9\">
+                <!-- //son referencias de ejemplo.. de donde nos encontramos en cada momento, pero en la principal no hace falta
                 <div class=\"indice\">
                     <ol class=\"breadcrumb\">
-                        <!--son referencias de ejemplo.. en este caso solo estaria inicio ya que estamos en la principal-->
-                        <li><a href=\"#\">Inicio</a></li>
-                        <li><a href=\"#\">Categorias</a></li>
-                        <li class=\"active\">Diseño web</li>
+                        <li class=\"active\">Inicio</li>
                     </ol>
                 </div>
-                <!-- Articulo 1-->
-                <article class=\"post clearfix\">
-                    <a href=\"#\" class=\"thumb pull-left\">
-                        <img class=\"img-thumbnail imagen\" src=\"";
-        // line 23
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("bundles/dawplantilla/images/bootstrap.png"), "html", null, true);
-        echo "\"></img>
-                    </a>
-                    <h2 class=\"post-tittle\">
-                        <a href=\"evento\">Titulo de ejemplo</a>
-                    </h2>
-                    <p class=\"post-contenido text-justify\">
-                        Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.
-                        Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500,
-                        cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una
-                        galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen.
-                    </p>
-                    <p align=\"right\"><span class=\"fecha\">14 de Enero de 2016</span> por <span class=\"post-autor\"><a href=\"#\">Fran Perez</a></span></p><br>
-                    <div class=\"contenedor-botones\">
-                        <a href=\"#\" class=\"btn btn-success\">Comentar <span class=\"badge\">10</span></a>
+                -->
+                <div class=\"neighborhood-guides\">
+                <div class=\"container\">
+                    <h2>Ejemplo Eventos Thumbnail</h2>
+                    <p>Tenemos eventos para todas las edades y gustos, ordenados por categorias o localización.</p>
+                    <div class=\"row\">
+                      <div class=\"col-md-4\">
+                          <div class=\"thumbnail\">
+                            <a href=\"evento\"><img src=\"";
+        // line 28
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("bundles/dawplantilla/images/pruebas/mexico-city.png"), "html", null, true);
+        echo "\" ></a>
+                          </div>
+                          <div class=\"thumbnail\">
+                            <a href=\"evento\"><img src=\"";
+        // line 31
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("bundles/dawplantilla/images/pruebas/ny.png"), "html", null, true);
+        echo "\" ></a>
+                          </div>
+                      </div>
+                      <div class=\"col-md-4\">
+                          <div class=\"thumbnail\">
+                            <a href=\"evento\"><img src=\"";
+        // line 36
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("bundles/dawplantilla/images/pruebas/tokyo.png"), "html", null, true);
+        echo "\" ></a>
+                          </div>
+                          <div class=\"thumbnail\">
+                            <a href=\"evento\"><img src=\"";
+        // line 39
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("bundles/dawplantilla/images/pruebas/paris.png"), "html", null, true);
+        echo "\" ></a>
+                          </div>
+                      </div>
                     </div>
-                </article>
-                 <!-- Articulo 2-->
-                <article class=\"post clearfix\">
-                    <a href=\"#\" class=\"thumb pull-left\">
-                        <img class=\"img-thumbnail imagen\" src=\"";
-        // line 42
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("bundles/dawplantilla/images/html.png"), "html", null, true);
-        echo "\"></img>
-                    </a>
-                    <h2 class=\"post-tittle\">
-                        <a href=\"#\">Titulo de ejemplo 2</a>
-                    </h2>
-                    <p class=\"post-contenido text-justify\">
-                        Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.
-                        Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500,
-                        cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una
-                        galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen.
-                    </p>
-                    <p align=\"right\"><span class=\"fecha\">13 de Enero de 2016</span> por <span class=\"post-autor\"><a href=\"#\">Fran Perez</a></span></p>
-                    <div class=\"contenedor-botones\">
-                        <a href=\"#\" class=\"btn btn-success\">Comentar <span class=\"badge\">20</span></a>
-                    </div>
-                </article>
-                <!--Barra de paginacion-->
-                <nav>
-                    <div clas=\"center-block\">
-                        <ul class=\"pagination\">
-                            <li class=\"disabled\"><a href=\"#\">&laquo;<span class=\"sr-only\">Anterior</span></a></li>
-                            <li class=\"active\"><a href=\"#\">1</a></li>
-                            <li><a href=\"#\">2</a></li>
-                            <li><a href=\"#\">3</a></li>
-                            <li><a href=\"#\">4</a></li>
-                            <li><a href=\"#\">5</a></li>
-                            <li><a href=\"#\">&raquo;<span class=\"sr-only\">Siguiente</span></a></li>
-                        </ul>
-                    </div>  
-                </nav>
+                  </div>
+                </div>
             </section>
             <!--Seccion secundaria Barra lateral-->
             <aside class=\"col-md-3 hidden-xd hidden-sm\">
@@ -163,18 +142,18 @@ class __TwigTemplate_86cc6396635569795a638bed915f335151169964189c408d09fc3edd17c
     </section>
 ";
         
-        $__internal_fd3534f2544c51d5a7e67405ff2bac96256d3f488d8f082a74fdd13b08292d73->leave($__internal_fd3534f2544c51d5a7e67405ff2bac96256d3f488d8f082a74fdd13b08292d73_prof);
+        $__internal_01948398b0c028e50d5f90aac7750cc1219ad8051a630cbd1a810213fb670bc9->leave($__internal_01948398b0c028e50d5f90aac7750cc1219ad8051a630cbd1a810213fb670bc9_prof);
 
     }
 
-    // line 99
+    // line 72
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_0637fba9de171c75b36b58bfacd3ae21e39743236b1b358914e4d751a0cd858d = $this->env->getExtension("native_profiler");
-        $__internal_0637fba9de171c75b36b58bfacd3ae21e39743236b1b358914e4d751a0cd858d->enter($__internal_0637fba9de171c75b36b58bfacd3ae21e39743236b1b358914e4d751a0cd858d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_7c6e880a0b40cf2ccdbab7cc731ebf9e49b70f7f752aa7616caadd7cad028a41 = $this->env->getExtension("native_profiler");
+        $__internal_7c6e880a0b40cf2ccdbab7cc731ebf9e49b70f7f752aa7616caadd7cad028a41->enter($__internal_7c6e880a0b40cf2ccdbab7cc731ebf9e49b70f7f752aa7616caadd7cad028a41_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
         
-        $__internal_0637fba9de171c75b36b58bfacd3ae21e39743236b1b358914e4d751a0cd858d->leave($__internal_0637fba9de171c75b36b58bfacd3ae21e39743236b1b358914e4d751a0cd858d_prof);
+        $__internal_7c6e880a0b40cf2ccdbab7cc731ebf9e49b70f7f752aa7616caadd7cad028a41->leave($__internal_7c6e880a0b40cf2ccdbab7cc731ebf9e49b70f7f752aa7616caadd7cad028a41_prof);
 
     }
 
@@ -190,7 +169,7 @@ class __TwigTemplate_86cc6396635569795a638bed915f335151169964189c408d09fc3edd17c
 
     public function getDebugInfo()
     {
-        return array (  171 => 99,  109 => 42,  87 => 23,  69 => 7,  63 => 6,  49 => 4,  37 => 3,  11 => 1,);
+        return array (  150 => 72,  112 => 39,  106 => 36,  98 => 31,  92 => 28,  69 => 7,  63 => 6,  49 => 4,  37 => 3,  11 => 1,);
     }
 }
 /* {% extends "::base.html.twig" %}*/
@@ -199,71 +178,44 @@ class __TwigTemplate_86cc6396635569795a638bed915f335151169964189c408d09fc3edd17c
 /* {% block stylesheets %}<link rel="stylesheet" href="{{asset('bundles/dawplantilla/css/estilo.css')}}" type="text/css" />{% endblock %}*/
 /* */
 /* {% block body %}*/
+/* */
+/*     */
 /*     <!--Aqui se encuntra el contenido de ejemplo para la parte principal-->*/
 /*     <section class="main container">*/
 /*         <div class="row">*/
-/*             <!--Seccion principal-->*/
+/*             <!--Seccion principal -->*/
 /*             <section class="posts col-md-9">*/
+/*                 <!-- //son referencias de ejemplo.. de donde nos encontramos en cada momento, pero en la principal no hace falta*/
 /*                 <div class="indice">*/
 /*                     <ol class="breadcrumb">*/
-/*                         <!--son referencias de ejemplo.. en este caso solo estaria inicio ya que estamos en la principal-->*/
-/*                         <li><a href="#">Inicio</a></li>*/
-/*                         <li><a href="#">Categorias</a></li>*/
-/*                         <li class="active">Diseño web</li>*/
+/*                         <li class="active">Inicio</li>*/
 /*                     </ol>*/
 /*                 </div>*/
-/*                 <!-- Articulo 1-->*/
-/*                 <article class="post clearfix">*/
-/*                     <a href="#" class="thumb pull-left">*/
-/*                         <img class="img-thumbnail imagen" src="{{asset('bundles/dawplantilla/images/bootstrap.png')}}"></img>*/
-/*                     </a>*/
-/*                     <h2 class="post-tittle">*/
-/*                         <a href="evento">Titulo de ejemplo</a>*/
-/*                     </h2>*/
-/*                     <p class="post-contenido text-justify">*/
-/*                         Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.*/
-/*                         Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500,*/
-/*                         cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una*/
-/*                         galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen.*/
-/*                     </p>*/
-/*                     <p align="right"><span class="fecha">14 de Enero de 2016</span> por <span class="post-autor"><a href="#">Fran Perez</a></span></p><br>*/
-/*                     <div class="contenedor-botones">*/
-/*                         <a href="#" class="btn btn-success">Comentar <span class="badge">10</span></a>*/
+/*                 -->*/
+/*                 <div class="neighborhood-guides">*/
+/*                 <div class="container">*/
+/*                     <h2>Ejemplo Eventos Thumbnail</h2>*/
+/*                     <p>Tenemos eventos para todas las edades y gustos, ordenados por categorias o localización.</p>*/
+/*                     <div class="row">*/
+/*                       <div class="col-md-4">*/
+/*                           <div class="thumbnail">*/
+/*                             <a href="evento"><img src="{{asset('bundles/dawplantilla/images/pruebas/mexico-city.png')}}" ></a>*/
+/*                           </div>*/
+/*                           <div class="thumbnail">*/
+/*                             <a href="evento"><img src="{{asset('bundles/dawplantilla/images/pruebas/ny.png')}}" ></a>*/
+/*                           </div>*/
+/*                       </div>*/
+/*                       <div class="col-md-4">*/
+/*                           <div class="thumbnail">*/
+/*                             <a href="evento"><img src="{{asset('bundles/dawplantilla/images/pruebas/tokyo.png')}}" ></a>*/
+/*                           </div>*/
+/*                           <div class="thumbnail">*/
+/*                             <a href="evento"><img src="{{asset('bundles/dawplantilla/images/pruebas/paris.png')}}" ></a>*/
+/*                           </div>*/
+/*                       </div>*/
 /*                     </div>*/
-/*                 </article>*/
-/*                  <!-- Articulo 2-->*/
-/*                 <article class="post clearfix">*/
-/*                     <a href="#" class="thumb pull-left">*/
-/*                         <img class="img-thumbnail imagen" src="{{asset('bundles/dawplantilla/images/html.png')}}"></img>*/
-/*                     </a>*/
-/*                     <h2 class="post-tittle">*/
-/*                         <a href="#">Titulo de ejemplo 2</a>*/
-/*                     </h2>*/
-/*                     <p class="post-contenido text-justify">*/
-/*                         Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.*/
-/*                         Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500,*/
-/*                         cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una*/
-/*                         galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen.*/
-/*                     </p>*/
-/*                     <p align="right"><span class="fecha">13 de Enero de 2016</span> por <span class="post-autor"><a href="#">Fran Perez</a></span></p>*/
-/*                     <div class="contenedor-botones">*/
-/*                         <a href="#" class="btn btn-success">Comentar <span class="badge">20</span></a>*/
-/*                     </div>*/
-/*                 </article>*/
-/*                 <!--Barra de paginacion-->*/
-/*                 <nav>*/
-/*                     <div clas="center-block">*/
-/*                         <ul class="pagination">*/
-/*                             <li class="disabled"><a href="#">&laquo;<span class="sr-only">Anterior</span></a></li>*/
-/*                             <li class="active"><a href="#">1</a></li>*/
-/*                             <li><a href="#">2</a></li>*/
-/*                             <li><a href="#">3</a></li>*/
-/*                             <li><a href="#">4</a></li>*/
-/*                             <li><a href="#">5</a></li>*/
-/*                             <li><a href="#">&raquo;<span class="sr-only">Siguiente</span></a></li>*/
-/*                         </ul>*/
-/*                     </div>  */
-/*                 </nav>*/
+/*                   </div>*/
+/*                 </div>*/
 /*             </section>*/
 /*             <!--Seccion secundaria Barra lateral-->*/
 /*             <aside class="col-md-3 hidden-xd hidden-sm">*/
