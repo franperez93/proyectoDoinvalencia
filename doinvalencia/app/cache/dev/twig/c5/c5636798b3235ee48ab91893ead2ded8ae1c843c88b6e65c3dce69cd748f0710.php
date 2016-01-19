@@ -24,46 +24,46 @@ class __TwigTemplate_86cc6396635569795a638bed915f335151169964189c408d09fc3edd17c
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_e255086c85cb937367b4d9cdf4606df75d74c0c752eb0d032a74a3e3c1eed4e2 = $this->env->getExtension("native_profiler");
-        $__internal_e255086c85cb937367b4d9cdf4606df75d74c0c752eb0d032a74a3e3c1eed4e2->enter($__internal_e255086c85cb937367b4d9cdf4606df75d74c0c752eb0d032a74a3e3c1eed4e2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "DawplantillaBundle:Default:index.html.twig"));
+        $__internal_295640345ad52cd7d99bf27f28597720c9188b1601b96080a2dffa0b2533667f = $this->env->getExtension("native_profiler");
+        $__internal_295640345ad52cd7d99bf27f28597720c9188b1601b96080a2dffa0b2533667f->enter($__internal_295640345ad52cd7d99bf27f28597720c9188b1601b96080a2dffa0b2533667f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "DawplantillaBundle:Default:index.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_e255086c85cb937367b4d9cdf4606df75d74c0c752eb0d032a74a3e3c1eed4e2->leave($__internal_e255086c85cb937367b4d9cdf4606df75d74c0c752eb0d032a74a3e3c1eed4e2_prof);
+        $__internal_295640345ad52cd7d99bf27f28597720c9188b1601b96080a2dffa0b2533667f->leave($__internal_295640345ad52cd7d99bf27f28597720c9188b1601b96080a2dffa0b2533667f_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_43d8a779a73718dd92c3a6098f92c74ba2694620b939fdeae89a95c428d3aaee = $this->env->getExtension("native_profiler");
-        $__internal_43d8a779a73718dd92c3a6098f92c74ba2694620b939fdeae89a95c428d3aaee->enter($__internal_43d8a779a73718dd92c3a6098f92c74ba2694620b939fdeae89a95c428d3aaee_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_dfbee30b2d53685877cd25a4f6868ce5980769aa7d85fcb1db148169712da43d = $this->env->getExtension("native_profiler");
+        $__internal_dfbee30b2d53685877cd25a4f6868ce5980769aa7d85fcb1db148169712da43d->enter($__internal_dfbee30b2d53685877cd25a4f6868ce5980769aa7d85fcb1db148169712da43d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Pagina principal del Pi!";
+        echo "Pagina principal de DoInValencia";
         
-        $__internal_43d8a779a73718dd92c3a6098f92c74ba2694620b939fdeae89a95c428d3aaee->leave($__internal_43d8a779a73718dd92c3a6098f92c74ba2694620b939fdeae89a95c428d3aaee_prof);
+        $__internal_dfbee30b2d53685877cd25a4f6868ce5980769aa7d85fcb1db148169712da43d->leave($__internal_dfbee30b2d53685877cd25a4f6868ce5980769aa7d85fcb1db148169712da43d_prof);
 
     }
 
     // line 4
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_e04f4f9ec8b82b0c1c26de94d3299b993581607477d9553f513cb3a5267a9382 = $this->env->getExtension("native_profiler");
-        $__internal_e04f4f9ec8b82b0c1c26de94d3299b993581607477d9553f513cb3a5267a9382->enter($__internal_e04f4f9ec8b82b0c1c26de94d3299b993581607477d9553f513cb3a5267a9382_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_8e7f1173ad3bc0cf1a42795e64b29d9a984feca4de88e52e89cee8adf73d3d96 = $this->env->getExtension("native_profiler");
+        $__internal_8e7f1173ad3bc0cf1a42795e64b29d9a984feca4de88e52e89cee8adf73d3d96->enter($__internal_8e7f1173ad3bc0cf1a42795e64b29d9a984feca4de88e52e89cee8adf73d3d96_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         echo "<link rel=\"stylesheet\" href=\"";
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("bundles/dawplantilla/css/estilo.css"), "html", null, true);
         echo "\" type=\"text/css\" />";
         
-        $__internal_e04f4f9ec8b82b0c1c26de94d3299b993581607477d9553f513cb3a5267a9382->leave($__internal_e04f4f9ec8b82b0c1c26de94d3299b993581607477d9553f513cb3a5267a9382_prof);
+        $__internal_8e7f1173ad3bc0cf1a42795e64b29d9a984feca4de88e52e89cee8adf73d3d96->leave($__internal_8e7f1173ad3bc0cf1a42795e64b29d9a984feca4de88e52e89cee8adf73d3d96_prof);
 
     }
 
     // line 6
     public function block_body($context, array $blocks = array())
     {
-        $__internal_3ed86ff767191642f5cfc2fcbb27cf799315fbbf09481cf628f80fdf29378bcf = $this->env->getExtension("native_profiler");
-        $__internal_3ed86ff767191642f5cfc2fcbb27cf799315fbbf09481cf628f80fdf29378bcf->enter($__internal_3ed86ff767191642f5cfc2fcbb27cf799315fbbf09481cf628f80fdf29378bcf_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_fd3534f2544c51d5a7e67405ff2bac96256d3f488d8f082a74fdd13b08292d73 = $this->env->getExtension("native_profiler");
+        $__internal_fd3534f2544c51d5a7e67405ff2bac96256d3f488d8f082a74fdd13b08292d73->enter($__internal_fd3534f2544c51d5a7e67405ff2bac96256d3f488d8f082a74fdd13b08292d73_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 7
         echo "    <!--Aqui se encuntra el contenido de ejemplo para la parte principal-->
@@ -88,7 +88,7 @@ class __TwigTemplate_86cc6396635569795a638bed915f335151169964189c408d09fc3edd17c
         echo "\"></img>
                     </a>
                     <h2 class=\"post-tittle\">
-                        <a href=\"#\">Titulo de ejemplo</a>
+                        <a href=\"evento\">Titulo de ejemplo</a>
                     </h2>
                     <p class=\"post-contenido text-justify\">
                         Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.
@@ -163,18 +163,18 @@ class __TwigTemplate_86cc6396635569795a638bed915f335151169964189c408d09fc3edd17c
     </section>
 ";
         
-        $__internal_3ed86ff767191642f5cfc2fcbb27cf799315fbbf09481cf628f80fdf29378bcf->leave($__internal_3ed86ff767191642f5cfc2fcbb27cf799315fbbf09481cf628f80fdf29378bcf_prof);
+        $__internal_fd3534f2544c51d5a7e67405ff2bac96256d3f488d8f082a74fdd13b08292d73->leave($__internal_fd3534f2544c51d5a7e67405ff2bac96256d3f488d8f082a74fdd13b08292d73_prof);
 
     }
 
     // line 99
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_42dc71c282a32e43a16f0d4fbf2d2d183e8d79f303010e16100c57bd33830cc0 = $this->env->getExtension("native_profiler");
-        $__internal_42dc71c282a32e43a16f0d4fbf2d2d183e8d79f303010e16100c57bd33830cc0->enter($__internal_42dc71c282a32e43a16f0d4fbf2d2d183e8d79f303010e16100c57bd33830cc0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_0637fba9de171c75b36b58bfacd3ae21e39743236b1b358914e4d751a0cd858d = $this->env->getExtension("native_profiler");
+        $__internal_0637fba9de171c75b36b58bfacd3ae21e39743236b1b358914e4d751a0cd858d->enter($__internal_0637fba9de171c75b36b58bfacd3ae21e39743236b1b358914e4d751a0cd858d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
         
-        $__internal_42dc71c282a32e43a16f0d4fbf2d2d183e8d79f303010e16100c57bd33830cc0->leave($__internal_42dc71c282a32e43a16f0d4fbf2d2d183e8d79f303010e16100c57bd33830cc0_prof);
+        $__internal_0637fba9de171c75b36b58bfacd3ae21e39743236b1b358914e4d751a0cd858d->leave($__internal_0637fba9de171c75b36b58bfacd3ae21e39743236b1b358914e4d751a0cd858d_prof);
 
     }
 
@@ -195,7 +195,7 @@ class __TwigTemplate_86cc6396635569795a638bed915f335151169964189c408d09fc3edd17c
 }
 /* {% extends "::base.html.twig" %}*/
 /* */
-/* {% block title %}Pagina principal del Pi!{% endblock %}*/
+/* {% block title %}Pagina principal de DoInValencia{% endblock %}*/
 /* {% block stylesheets %}<link rel="stylesheet" href="{{asset('bundles/dawplantilla/css/estilo.css')}}" type="text/css" />{% endblock %}*/
 /* */
 /* {% block body %}*/
@@ -218,7 +218,7 @@ class __TwigTemplate_86cc6396635569795a638bed915f335151169964189c408d09fc3edd17c
 /*                         <img class="img-thumbnail imagen" src="{{asset('bundles/dawplantilla/images/bootstrap.png')}}"></img>*/
 /*                     </a>*/
 /*                     <h2 class="post-tittle">*/
-/*                         <a href="#">Titulo de ejemplo</a>*/
+/*                         <a href="evento">Titulo de ejemplo</a>*/
 /*                     </h2>*/
 /*                     <p class="post-contenido text-justify">*/
 /*                         Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.*/

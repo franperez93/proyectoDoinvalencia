@@ -110,6 +110,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'Daw\\plantillaBundle\\Controller\\DefaultController::indexAction',  '_route' => 'dawplantilla_homepage',);
         }
 
+        // prueba_homepage
+        if ($pathinfo === '/evento') {
+            return array (  '_controller' => 'Daw\\plantillaBundle\\Controller\\DefaultController::eventoAction',  '_route' => 'prueba_homepage',);
+        }
+
         // homepage
         if (rtrim($pathinfo, '/') === '') {
             if (substr($pathinfo, -1) !== '/') {

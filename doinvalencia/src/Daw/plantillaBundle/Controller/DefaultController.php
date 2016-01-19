@@ -10,4 +10,11 @@ class DefaultController extends Controller
     {
         return $this->render('DawplantillaBundle:Default:index.html.twig');
     }
+    
+     public function eventoAction()
+    {
+        return $this->render('DawplantillaBundle:Default:evento.html.twig');
+    }
+    
+    
 }
