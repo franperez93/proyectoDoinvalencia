@@ -17,7 +17,7 @@
         <section class="jumbotron">
             <div class="container">
                 <h1>DoInValencia</h1>
-                <p>Eventos que podemos encontrar en la provincia de valencia i alrededores</p>
+                <p>Eventos que podemos encontrar en la provincia de valencia y alrededores</p>
             </div>
         </section>
     
@@ -40,7 +40,7 @@
                         <li class="active"><a href="#">Inicio</a></li>
                         <li><a href="#">Pagina 1</a></li>
                         <li><a href="#">Pagina 2</a></li>
-                        <li class="dropdown">
+                        <li class="dropdown elementos">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
                             Elementos <span class="caret"></span>
                             </a>
@@ -63,7 +63,9 @@
         </nav>    
     </header>
     
-        {% block body %}{% endblock %}
+        {% block body %}
+        
+        {% endblock %}
         
          <!-- Footer de la pagina web-->
         <footer class="site-footer">
@@ -85,6 +87,7 @@
     
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="{{asset('bundles/dawplantilla/js/script.js')}}"></script>
         {% block javascripts %}{% endblock %}
     </body>
 </html>
