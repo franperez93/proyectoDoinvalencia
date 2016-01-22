@@ -105,6 +105,263 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
+        // back_end_data_base_homepage
+        if (rtrim($pathinfo, '/') === '') {
+            if (substr($pathinfo, -1) !== '/') {
+                return $this->redirect($pathinfo.'/', 'back_end_data_base_homepage');
+            }
+
+            return array (  '_controller' => 'BackEnd\\DataBaseBundle\\Controller\\DefaultController::indexAction',  '_route' => 'back_end_data_base_homepage',);
+        }
+
+        if (0 === strpos($pathinfo, '/evento')) {
+            // evento_index
+            if (rtrim($pathinfo, '/') === '/evento') {
+                if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
+                    $allow = array_merge($allow, array('GET', 'HEAD'));
+                    goto not_evento_index;
+                }
+
+                if (substr($pathinfo, -1) !== '/') {
+                    return $this->redirect($pathinfo.'/', 'evento_index');
+                }
+
+                return array (  '_controller' => 'BackEnd\\DataBaseBundle\\Controller\\EventoController::indexAction',  '_route' => 'evento_index',);
+            }
+            not_evento_index:
+
+            // evento_show
+            if (preg_match('#^/evento/(?P<id>[^/]++)/show$#s', $pathinfo, $matches)) {
+                if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
+                    $allow = array_merge($allow, array('GET', 'HEAD'));
+                    goto not_evento_show;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'evento_show')), array (  '_controller' => 'BackEnd\\DataBaseBundle\\Controller\\EventoController::showAction',));
+            }
+            not_evento_show:
+
+            // evento_new
+            if ($pathinfo === '/evento/new') {
+                if (!in_array($this->context->getMethod(), array('GET', 'POST', 'HEAD'))) {
+                    $allow = array_merge($allow, array('GET', 'POST', 'HEAD'));
+                    goto not_evento_new;
+                }
+
+                return array (  '_controller' => 'BackEnd\\DataBaseBundle\\Controller\\EventoController::newAction',  '_route' => 'evento_new',);
+            }
+            not_evento_new:
+
+            // evento_edit
+            if (preg_match('#^/evento/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
+                if (!in_array($this->context->getMethod(), array('GET', 'POST', 'HEAD'))) {
+                    $allow = array_merge($allow, array('GET', 'POST', 'HEAD'));
+                    goto not_evento_edit;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'evento_edit')), array (  '_controller' => 'BackEnd\\DataBaseBundle\\Controller\\EventoController::editAction',));
+            }
+            not_evento_edit:
+
+            // evento_delete
+            if (preg_match('#^/evento/(?P<id>[^/]++)/delete$#s', $pathinfo, $matches)) {
+                if ($this->context->getMethod() != 'DELETE') {
+                    $allow[] = 'DELETE';
+                    goto not_evento_delete;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'evento_delete')), array (  '_controller' => 'BackEnd\\DataBaseBundle\\Controller\\EventoController::deleteAction',));
+            }
+            not_evento_delete:
+
+        }
+
+        if (0 === strpos($pathinfo, '/participaciones')) {
+            // participaciones_index
+            if (rtrim($pathinfo, '/') === '/participaciones') {
+                if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
+                    $allow = array_merge($allow, array('GET', 'HEAD'));
+                    goto not_participaciones_index;
+                }
+
+                if (substr($pathinfo, -1) !== '/') {
+                    return $this->redirect($pathinfo.'/', 'participaciones_index');
+                }
+
+                return array (  '_controller' => 'BackEnd\\DataBaseBundle\\Controller\\ParticipacionesController::indexAction',  '_route' => 'participaciones_index',);
+            }
+            not_participaciones_index:
+
+            // participaciones_show
+            if (preg_match('#^/participaciones/(?P<id>[^/]++)/show$#s', $pathinfo, $matches)) {
+                if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
+                    $allow = array_merge($allow, array('GET', 'HEAD'));
+                    goto not_participaciones_show;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'participaciones_show')), array (  '_controller' => 'BackEnd\\DataBaseBundle\\Controller\\ParticipacionesController::showAction',));
+            }
+            not_participaciones_show:
+
+            // participaciones_new
+            if ($pathinfo === '/participaciones/new') {
+                if (!in_array($this->context->getMethod(), array('GET', 'POST', 'HEAD'))) {
+                    $allow = array_merge($allow, array('GET', 'POST', 'HEAD'));
+                    goto not_participaciones_new;
+                }
+
+                return array (  '_controller' => 'BackEnd\\DataBaseBundle\\Controller\\ParticipacionesController::newAction',  '_route' => 'participaciones_new',);
+            }
+            not_participaciones_new:
+
+            // participaciones_edit
+            if (preg_match('#^/participaciones/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
+                if (!in_array($this->context->getMethod(), array('GET', 'POST', 'HEAD'))) {
+                    $allow = array_merge($allow, array('GET', 'POST', 'HEAD'));
+                    goto not_participaciones_edit;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'participaciones_edit')), array (  '_controller' => 'BackEnd\\DataBaseBundle\\Controller\\ParticipacionesController::editAction',));
+            }
+            not_participaciones_edit:
+
+            // participaciones_delete
+            if (preg_match('#^/participaciones/(?P<id>[^/]++)/delete$#s', $pathinfo, $matches)) {
+                if ($this->context->getMethod() != 'DELETE') {
+                    $allow[] = 'DELETE';
+                    goto not_participaciones_delete;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'participaciones_delete')), array (  '_controller' => 'BackEnd\\DataBaseBundle\\Controller\\ParticipacionesController::deleteAction',));
+            }
+            not_participaciones_delete:
+
+        }
+
+        if (0 === strpos($pathinfo, '/tipo_evento')) {
+            // tipo_evento_index
+            if (rtrim($pathinfo, '/') === '/tipo_evento') {
+                if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
+                    $allow = array_merge($allow, array('GET', 'HEAD'));
+                    goto not_tipo_evento_index;
+                }
+
+                if (substr($pathinfo, -1) !== '/') {
+                    return $this->redirect($pathinfo.'/', 'tipo_evento_index');
+                }
+
+                return array (  '_controller' => 'BackEnd\\DataBaseBundle\\Controller\\tipo_EventoController::indexAction',  '_route' => 'tipo_evento_index',);
+            }
+            not_tipo_evento_index:
+
+            // tipo_evento_show
+            if (preg_match('#^/tipo_evento/(?P<id>[^/]++)/show$#s', $pathinfo, $matches)) {
+                if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
+                    $allow = array_merge($allow, array('GET', 'HEAD'));
+                    goto not_tipo_evento_show;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'tipo_evento_show')), array (  '_controller' => 'BackEnd\\DataBaseBundle\\Controller\\tipo_EventoController::showAction',));
+            }
+            not_tipo_evento_show:
+
+            // tipo_evento_new
+            if ($pathinfo === '/tipo_evento/new') {
+                if (!in_array($this->context->getMethod(), array('GET', 'POST', 'HEAD'))) {
+                    $allow = array_merge($allow, array('GET', 'POST', 'HEAD'));
+                    goto not_tipo_evento_new;
+                }
+
+                return array (  '_controller' => 'BackEnd\\DataBaseBundle\\Controller\\tipo_EventoController::newAction',  '_route' => 'tipo_evento_new',);
+            }
+            not_tipo_evento_new:
+
+            // tipo_evento_edit
+            if (preg_match('#^/tipo_evento/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
+                if (!in_array($this->context->getMethod(), array('GET', 'POST', 'HEAD'))) {
+                    $allow = array_merge($allow, array('GET', 'POST', 'HEAD'));
+                    goto not_tipo_evento_edit;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'tipo_evento_edit')), array (  '_controller' => 'BackEnd\\DataBaseBundle\\Controller\\tipo_EventoController::editAction',));
+            }
+            not_tipo_evento_edit:
+
+            // tipo_evento_delete
+            if (preg_match('#^/tipo_evento/(?P<id>[^/]++)/delete$#s', $pathinfo, $matches)) {
+                if ($this->context->getMethod() != 'DELETE') {
+                    $allow[] = 'DELETE';
+                    goto not_tipo_evento_delete;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'tipo_evento_delete')), array (  '_controller' => 'BackEnd\\DataBaseBundle\\Controller\\tipo_EventoController::deleteAction',));
+            }
+            not_tipo_evento_delete:
+
+        }
+
+        if (0 === strpos($pathinfo, '/usuario')) {
+            // usuario_index
+            if (rtrim($pathinfo, '/') === '/usuario') {
+                if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
+                    $allow = array_merge($allow, array('GET', 'HEAD'));
+                    goto not_usuario_index;
+                }
+
+                if (substr($pathinfo, -1) !== '/') {
+                    return $this->redirect($pathinfo.'/', 'usuario_index');
+                }
+
+                return array (  '_controller' => 'BackEnd\\DataBaseBundle\\Controller\\UsuarioController::indexAction',  '_route' => 'usuario_index',);
+            }
+            not_usuario_index:
+
+            // usuario_show
+            if (preg_match('#^/usuario/(?P<id>[^/]++)/show$#s', $pathinfo, $matches)) {
+                if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
+                    $allow = array_merge($allow, array('GET', 'HEAD'));
+                    goto not_usuario_show;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'usuario_show')), array (  '_controller' => 'BackEnd\\DataBaseBundle\\Controller\\UsuarioController::showAction',));
+            }
+            not_usuario_show:
+
+            // usuario_new
+            if ($pathinfo === '/usuario/new') {
+                if (!in_array($this->context->getMethod(), array('GET', 'POST', 'HEAD'))) {
+                    $allow = array_merge($allow, array('GET', 'POST', 'HEAD'));
+                    goto not_usuario_new;
+                }
+
+                return array (  '_controller' => 'BackEnd\\DataBaseBundle\\Controller\\UsuarioController::newAction',  '_route' => 'usuario_new',);
+            }
+            not_usuario_new:
+
+            // usuario_edit
+            if (preg_match('#^/usuario/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
+                if (!in_array($this->context->getMethod(), array('GET', 'POST', 'HEAD'))) {
+                    $allow = array_merge($allow, array('GET', 'POST', 'HEAD'));
+                    goto not_usuario_edit;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'usuario_edit')), array (  '_controller' => 'BackEnd\\DataBaseBundle\\Controller\\UsuarioController::editAction',));
+            }
+            not_usuario_edit:
+
+            // usuario_delete
+            if (preg_match('#^/usuario/(?P<id>[^/]++)/delete$#s', $pathinfo, $matches)) {
+                if ($this->context->getMethod() != 'DELETE') {
+                    $allow[] = 'DELETE';
+                    goto not_usuario_delete;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'usuario_delete')), array (  '_controller' => 'BackEnd\\DataBaseBundle\\Controller\\UsuarioController::deleteAction',));
+            }
+            not_usuario_delete:
+
+        }
+
         // dawplantilla_homepage
         if ($pathinfo === '/home') {
             return array (  '_controller' => 'Daw\\plantillaBundle\\Controller\\DefaultController::indexAction',  '_route' => 'dawplantilla_homepage',);

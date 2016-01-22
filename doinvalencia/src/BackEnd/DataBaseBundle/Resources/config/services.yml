@@ -1,0 +1,4 @@
+services:
+#    back_end_data_base.example:
+#        class: BackEnd\DataBaseBundle\Example
+#        arguments: ["@service_id", "plain_value", %parameter%]
