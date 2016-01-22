@@ -1,0 +1,24 @@
+participaciones_index:
+    path:     /
+    defaults: { _controller: "BackEndDataBaseBundle:Participaciones:index" }
+    methods:  GET
+
+participaciones_show:
+    path:     /{id}/show
+    defaults: { _controller: "BackEndDataBaseBundle:Participaciones:show" }
+    methods:  GET
+
+participaciones_new:
+    path:     /new
+    defaults: { _controller: "BackEndDataBaseBundle:Participaciones:new" }
+    methods:  [GET, POST]
+
+participaciones_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "BackEndDataBaseBundle:Participaciones:edit" }
+    methods:  [GET, POST]
+
+participaciones_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "BackEndDataBaseBundle:Participaciones:delete" }
+    methods:  DELETE

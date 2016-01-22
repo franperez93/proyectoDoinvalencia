@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Participaciones list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Fecha</th>
+                <th>Usuarioid</th>
+                <th>Eventoid</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for participacione in participaciones %}
+            <tr>
+                <td><a href="{{ path('participaciones_show', { 'id': participacione.id }) }}">{{ participacione.id }}</a></td>
+                <td>{% if participacione.fecha %}{{ participacione.fecha|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ participacione.usuarioId }}</td>
+                <td>{{ participacione.eventoId }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('participaciones_show', { 'id': participacione.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('participaciones_edit', { 'id': participacione.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('participaciones_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}

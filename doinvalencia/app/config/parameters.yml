@@ -2,11 +2,12 @@
 parameters:
     database_host: 127.0.0.1
     database_port: null
-    database_name: symfony
-    database_user: root
-    database_password: null
+    database_name: doinvalencia
+    database_user: dproyect
+    database_password: daw
     mailer_transport: smtp
     mailer_host: 127.0.0.1
     mailer_user: null
     mailer_password: null
     secret: 7ccb580ff3a2406c877e0285ef90eeef67f161d6
+    database_driver: pdo_mysql

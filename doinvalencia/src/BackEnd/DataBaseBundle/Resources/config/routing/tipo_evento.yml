@@ -1,0 +1,24 @@
+tipo_evento_index:
+    path:     /
+    defaults: { _controller: "BackEndDataBaseBundle:tipo_Evento:index" }
+    methods:  GET
+
+tipo_evento_show:
+    path:     /{id}/show
+    defaults: { _controller: "BackEndDataBaseBundle:tipo_Evento:show" }
+    methods:  GET
+
+tipo_evento_new:
+    path:     /new
+    defaults: { _controller: "BackEndDataBaseBundle:tipo_Evento:new" }
+    methods:  [GET, POST]
+
+tipo_evento_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "BackEndDataBaseBundle:tipo_Evento:edit" }
+    methods:  [GET, POST]
+
+tipo_evento_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "BackEndDataBaseBundle:tipo_Evento:delete" }
+    methods:  DELETE
