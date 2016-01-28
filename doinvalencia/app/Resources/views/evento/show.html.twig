@@ -1,68 +1,59 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Evento</h1>
-
-    <table>
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ evento.id }}</td>
-            </tr>
-            <tr>
-                <th>Nombre</th>
-                <td>{{ evento.nombre }}</td>
-            </tr>
-            <tr>
-                <th>Localizacion</th>
-                <td>{{ evento.localizacion }}</td>
-            </tr>
-            <tr>
-                <th>Ciudad</th>
-                <td>{{ evento.ciudad }}</td>
-            </tr>
-            <tr>
-                <th>Fecha</th>
-                <td>{% if evento.fecha %}{{ evento.fecha|date('Y-m-d H:i:s') }}{% endif %}</td>
-            </tr>
-            <tr>
-                <th>Reservas</th>
-                <td>{{ evento.reservas }}</td>
-            </tr>
-            <tr>
-                <th>Reservasrestantes</th>
-                <td>{{ evento.reservasRestantes }}</td>
-            </tr>
-            <tr>
-                <th>Informacion</th>
-                <td>{{ evento.informacion }}</td>
-            </tr>
-            <tr>
-                <th>Precioreserva</th>
-                <td>{{ evento.precioReserva }}</td>
-            </tr>
-            <tr>
-                <th>Tags</th>
-                <td>{{ evento.tags }}</td>
-            </tr>
-            <tr>
-                <th>Tipoeventoid</th>
-                <td>{{ evento.tipoEventoId }}</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <ul>
-        <li>
-            <a href="{{ path('evento_index') }}">Back to the list</a>
-        </li>
-        <li>
-            <a href="{{ path('evento_edit', { 'id': evento.id }) }}">Edit</a>
-        </li>
-        <li>
-            {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
-            {{ form_end(delete_form) }}
-        </li>
-    </ul>
+   
+    <section class="main container">
+        <div class="row">
+            <!--Seccion principal-->
+            <section class="posts col-md-9">
+                <div class="indice">
+                    <ol class="breadcrumb">
+                        <!--son referencias de ejemplo.. en este caso solo estaria inicio ya que estamos en la principal-->
+                        <li><a href="#">Inicio</a></li>
+                        <li class="active">Eventos</li>
+                    </ol>
+                </div>
+                <!-- Articulo 1-->
+                <article class="post clearfix">
+                    <a href="#" class="thumb pull-left">
+                        <img class="img-thumbnail imagen" src="{{asset('bundles/dawplantilla/images/prueba/bootstrap.png')}}"></img>
+                    </a>
+                    <h2 class="post-tittle">
+                        {{ evento.nombre }}
+                    </h2>
+                    <p class="post-contenido text-justify">
+                       {{ evento.informacion }}
+                    </p>
+                    <p><b>Localizacion: </b>{{ evento.localizacion }}</p>
+                    <p><b>Ciudad: </b>{{ evento.ciudad }}</p>
+                    <p><b>Fecha del evento: </b>{{ evento.fecha|date('Y-m-d') }}</p>
+                    <p><b>Hora del evento: </b>{{ evento.fecha|date('H:i:s') }}</p>
+                    <div class="contenedor-botones">
+                        <a href="#" class="btn btn-success">Comentar <span class="badge">10</span></a>
+                    </div>
+                </article>
+            </section>
+            <!--Seccion secundaria Barra lateral-->
+            <aside class="col-md-3 hidden-xd hidden-sm">
+                <h4>Clase</h4>
+                <div class=="list-group">
+                    <a href="#" class="list-group-item active">Fran</a>
+                    <a href="#" class="list-group-item">Emilio</a>
+                    <a href="#" class="list-group-item">Victor</a>
+                    <a href="#" class="list-group-item">Raul cabron</a>
+                    <a href="#" class="list-group-item">Josep maricon</a>
+                </div>
+                
+                <h4>Proximos eventos</h4>
+                <a href="#" class="list-group-item">
+                    <h4 class="list-group-item-heading">{{ evento.nombre }}</h4>
+                    <p class="list-group-item-text"></p>
+                </a>
+                <a href="#" class="list-group-item">
+                    <h4 class="list-group-item-heading">Titulo de ejemplo 2</h4>
+                    <p class="list-group-item-text">como hacer un artiuclo de ejemplo 2</p>
+                </a>
+            </aside>
+        </div>
+    </section>
 {% endblock %}

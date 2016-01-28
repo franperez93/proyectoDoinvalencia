@@ -11,9 +11,9 @@ class DefaultController extends Controller
         return $this->render('DawplantillaBundle:Default:index.html.twig');
     }
     
-     public function eventoAction()
+     public function mieventoAction()
     {
-        return $this->render('DawplantillaBundle:Default:evento.html.twig');
+        return $this->render('DawplantillaBundle:Default:mievento.html.twig');
     }
     
     

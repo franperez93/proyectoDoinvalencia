@@ -3,5 +3,5 @@ dawplantilla_homepage:
     defaults: { _controller: DawplantillaBundle:Default:index }
     
 prueba_homepage:    
-    path:     /evento
-    defaults: { _controller: DawplantillaBundle:Default:evento }
+    path:     /mievento
+    defaults: { _controller: DawplantillaBundle:Default:mievento }
