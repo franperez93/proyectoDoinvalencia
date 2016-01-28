@@ -9,28 +9,39 @@
                 <div class="indice">
                     <ol class="breadcrumb">
                         <!--son referencias de ejemplo.. en este caso solo estaria inicio ya que estamos en la principal-->
-                        <li><a href="#">Inicio</a></li>
-                        <li class="active">Eventos</li>
+                        <li><a href="{{ path('dawplantilla_homepage') }}">Inicio</a></li>
+                        <li><a href="{{ path('evento_index') }}">Eventos</a></li>
+                        <li class="active">{{ evento.nombre }}</li>
                     </ol>
                 </div>
                 <!-- Articulo 1-->
                 <article class="post clearfix">
-                    <a href="#" class="thumb pull-left">
-                        <img class="img-thumbnail imagen" src="{{asset('bundles/dawplantilla/images/prueba/bootstrap.png')}}"></img>
-                    </a>
-                    <h2 class="post-tittle">
-                        {{ evento.nombre }}
-                    </h2>
-                    <p class="post-contenido text-justify">
-                       {{ evento.informacion }}
-                    </p>
-                    <p><b>Localizacion: </b>{{ evento.localizacion }}</p>
-                    <p><b>Ciudad: </b>{{ evento.ciudad }}</p>
-                    <p><b>Fecha del evento: </b>{{ evento.fecha|date('Y-m-d') }}</p>
-                    <p><b>Hora del evento: </b>{{ evento.fecha|date('H:i:s') }}</p>
-                    <div class="contenedor-botones">
-                        <a href="#" class="btn btn-success">Comentar <span class="badge">10</span></a>
+                
+                    
+                        <a href="#" class="thumb">
+                            <img class="img-thumbnail imagen" src="{{asset('bundles/dawplantilla/images/prueba/bootstrap.png')}}"></img>
+                        </a>
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h2 class="post-tittle">{{ evento.nombre }}</h2>
+                        </div>
+                        <div class="panel-body">
+                            <p class="post-contenido text-justify">
+                               {{ evento.informacion }}
+                            </p>
+                            <br>
+                            <p><b>Localizacion: </b>{{ evento.localizacion }}</p>
+                            <p><b>Ciudad: </b>{{ evento.ciudad }}</p>
+                            <p><b>Fecha del evento: </b>{{ evento.fecha|date('Y-m-d') }}</p>
+                            <p><b>Hora del evento: </b>{{ evento.fecha|date('H:i:s') }}</p>
+                        </div>    
+                        <div class="panel-footer">
+                            <div class="contenedor-botones">
+                                <a href="#" class="btn btn-success">Comentar <span class="badge">10</span></a>
+                            </div>
+                        </div>    
                     </div>
+                    
                 </article>
             </section>
             <!--Seccion secundaria Barra lateral-->

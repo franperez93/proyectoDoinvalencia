@@ -1,57 +1,83 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Evento list</h1>
-
-    <table>
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Nombre</th>
-                <th>Localizacion</th>
-                <th>Ciudad</th>
-                <th>Fecha</th>
-                <th>Reservas</th>
-                <th>Reservasrestantes</th>
-                <th>Informacion</th>
-                <th>Precioreserva</th>
-                <th>Tags</th>
-                <th>Tipoeventoid</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for evento in eventos %}
-            <tr>
-                <td><a href="{{ path('evento_show', { 'id': evento.id }) }}">{{ evento.id }}</a></td>
-                <td>{{ evento.nombre }}</td>
-                <td>{{ evento.localizacion }}</td>
-                <td>{{ evento.ciudad }}</td>
-                <td>{% if evento.fecha %}{{ evento.fecha|date('Y-m-d H:i:s') }}{% endif %}</td>
-                <td>{{ evento.reservas }}</td>
-                <td>{{ evento.reservasRestantes }}</td>
-                <td>{{ evento.informacion }}</td>
-                <td>{{ evento.precioReserva }}</td>
-                <td>{{ evento.tags }}</td>
-                <td>{{ evento.tipoEventoId }}</td>
-                <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('evento_show', { 'id': evento.id }) }}">show</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('evento_edit', { 'id': evento.id }) }}">edit</a>
-                        </li>
+ <section class="main container">
+    <div class="row">
+    <!--Seccion principal-->
+        <section class="posts col-md-9">
+            <div class="indice">
+                <ol class="breadcrumb">
+                    <!--son referencias de ejemplo.. en este caso solo estaria inicio ya que estamos en la principal-->
+                    <li><a href="{{ path('dawplantilla_homepage') }}">Inicio</a></li>
+                    <li class="active">Eventos</li>
+                </ol>
+            </div>   
+                
+                {% for evento in eventos %}
+                
+                <article class="post clearfix">
+                    <a href="#" class="thumb pull-left">
+                        <img class="img-thumbnail" src="{{asset('bundles/dawplantilla/images/prueba/html.png')}}"></img>
+                    </a>
+                    <h2 class="post-tittle">
+                        <a href="{{ path('evento_show', { 'id': evento.id }) }}">{{ evento.nombre }}</a>
+                    </h2>
+                    <p class="post-contenido text-justify">{{ evento.informacion }}</p>
+                    <p class="post-contenido text-justify"><b>Localizacion: </b>{{ evento.localizacion }}</p>
+                    <p class="post-contenido text-justify"><b>Ciudad: </b>{{ evento.ciudad }}</p>
+                    <p class="post-contenido text-justify"><b>Fecha: </b>{% if evento.fecha %}{{ evento.fecha|date('Y-m-d') }}{% endif %}</p>
+                    <p class="post-contenido text-justify"><b>Hora: </b>{% if evento.fecha %}{{ evento.fecha|date('H:i:s') }}{% endif %}</p>
+                    <br>
+                    <a href="#"><i>{{ evento.tags }}</i></a>
+                    
+                    <div class="contenedor-botones">
+                        <br>
+                        <a href="#" class="btn btn-success">Comentar <span class="badge">20</span></a>
+                        <a href="{{ path('evento_edit', { 'id': evento.id }) }}" class="btn btn-primary">edit</a>
+                    </div>
+                   
+                </article>
+                     
+                {% endfor %}
+                
+            <nav>
+                <div clas="center-block">
+                    <ul class="pagination">
+                        <li class="disabled"><a href="#">&laquo;<span class="sr-only">Anterior</span></a></li>
+                        <li class="active"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#">&raquo;<span class="sr-only">Siguiente</span></a></li>
                     </ul>
-                </td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+                </div>  
+            </nav>
+        </section>
+            
+        <!--Seccion secundaria Barra lateral-->
+            <aside class="col-md-3 hidden-xd hidden-sm">
+                
+                <h2>Algo temporal</h2>
+                <a href="{{ path('evento_new') }}" class="btn btn-warning"><b>Create a new entry</b></a>
 
-    <ul>
-        <li>
-            <a href="{{ path('evento_new') }}">Create a new entry</a>
-        </li>
-    </ul>
+                <h4>Clase</h4>
+                <div class=="list-group">
+                    <a href="#" class="list-group-item active">Fran</a>
+                    <a href="#" class="list-group-item">Emilio</a>
+                    <a href="#" class="list-group-item">Victor</a>
+                    <a href="#" class="list-group-item">Raul cabron</a>
+                    <a href="#" class="list-group-item">Josep maricon</a>
+                </div>
+                <h4>Articulos recientes</h4>
+                {% for evento in eventos %}
+                    <a href="{{ path('evento_show', { 'id': evento.id }) }}" class="list-group-item">
+                        <h4 class="list-group-item-heading">{{ evento.nombre }}</h4>
+                        <p class="list-group-item-text">Mas informacion</p>
+                    </a>
+                {% endfor %}
+            </aside>
+    </div>
+</section>
+    
 {% endblock %}
