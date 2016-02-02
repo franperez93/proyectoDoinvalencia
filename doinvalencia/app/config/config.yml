@@ -72,7 +72,7 @@ swiftmailer:
 fos_user:
     db_driver: orm # other valid values are 'mongodb', 'couchdb' and 'propel'
     firewall_name: main
-    user_class: AppBundle\Entity\User
+    user_class: BackEnd\DataBaseBundle\Entity\User
 
 services:
     fos_user.doctrine_registry:

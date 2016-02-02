@@ -13,7 +13,3 @@ back_end_data_base_participaciones:
 back_end_data_base_tipo_evento:
     resource: "@BackEndDataBaseBundle/Resources/config/routing/tipo_evento.yml"
     prefix:   /tipo_evento
-    
-back_end_data_base_usuario:
-    resource: "@BackEndDataBaseBundle/Resources/config/routing/usuario.yml"
-    prefix:   /usuario
