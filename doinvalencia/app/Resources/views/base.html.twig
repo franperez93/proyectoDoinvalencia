@@ -5,8 +5,14 @@
         <title>{% block title %}{% endblock %}</title>
         
         <meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1.0 maximum-scale=1.0, minimum-scale=1.0">
+
+        <link href="css/reset.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+
+        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
         <link rel="stylesheet" href="{{asset('bundles/dawplantilla/css/estilo.css')}}" type="text/css" />
+
        
         {% block stylesheets %}{% endblock %}
         
@@ -28,7 +34,7 @@
         <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navegacionBar">
+                    <button type="button" class="navbar-toggle collapsed toggle-nav" id="bars" data-toggle="collapse" data-target="#navegacionBar">
                         <span class="sr-only">Desplegar menu</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -63,6 +69,63 @@
                 </div>
             </div>
         </nav>    
+
+        <div id="container">
+
+        <div id="canvas">
+
+            <div id="nav">
+                    <h2 id="title"><i class="fa fa-sitemap"></i> MENU</h2>
+                         <ul id="toggle">
+        <li>
+            <div class="active border">
+                <span class="menu-icons fa fa-home"></span>   <a href="#">HOME</a>
+            </div>
+        </li>
+
+        <li>
+            <div>
+                <span class="menu-icons  fa fa-user"></span>   <a href="#">ABOUT US</a>
+                <span class="the-btn fa fa-plus"></span>
+                </div>
+
+            <ul>
+                <li>
+                    <a href="#">OUR TEAM</a>
+                </li>
+
+                <li>
+                    <a href="#">OUR SERVICES</a>
+                </li>
+            </ul>
+
+        </li>
+
+        <li>
+            <div>
+                <span class="menu-icons  fa fa-briefcase"></span>
+                    <a href="#">PORTFOLIO</a><span class="the-btn fa fa-plus"></span>
+            </div>
+
+            <ul>
+                <li>
+                    <a href="#">WEB DESIGN</a>
+                </li>
+
+                <li>
+                    <a href="#">GRAPHIC DESIGN</a>
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            <div>
+                <span class="menu-icons  fa fa-envelope"></span>
+                      <a href="#">CONTACT</a>
+            </div>
+        </li>
+    </ul>
+             </div>
     </header>
     
         {% block body %}
@@ -90,6 +153,8 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
         <script src="{{asset('bundles/dawplantilla/js/script.js')}}"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="js/custom.js"></script>
         {% block javascripts %}{% endblock %}
     </body>
 </html>
