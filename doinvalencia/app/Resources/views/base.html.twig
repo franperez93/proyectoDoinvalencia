@@ -57,12 +57,13 @@
                     </ul>
                     <!--parte derecha del menu-->
                     <div class="navbar-text navbar-right">
-                        <a href="#" class="btn btn-xs btn-primary"><span class="glyphicon glyphicon-user"></span> Usuario</a>
+                        <a href="{{path('fos_user_security_login')}}" class="btn btn-xs btn-primary"><span class="glyphicon glyphicon-user"></span> Usuario</a>
                         <a href="#" class="btn btn-xs btn-danger"><span class="glyphicon glyphicon-log-out"></span> Salir</a>
                     </div>
                 </div>
             </div>
-        </nav>    
+        </nav> 
+
     </header>
     
         {% block body %}

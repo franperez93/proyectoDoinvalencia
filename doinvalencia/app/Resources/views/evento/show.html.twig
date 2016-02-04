@@ -1,4 +1,4 @@
-{% extends 'base.html.twig' %}
+{% extends "FOSUserBundle::layout.html.twig" %}
 
 {% block body %}
    
@@ -16,10 +16,8 @@
                 </div>
                 <!-- Articulo 1-->
                 <article class="post clearfix">
-                
-                    
                         <a href="#" class="thumb">
-                            <img class="img-thumbnail imagen" src="{{asset('bundles/dawplantilla/images/prueba/bootstrap.png')}}"></img>
+                            <img class="img-thumbnail imagen" src="{{ evento.imagen}}"></img>
                         </a>
                     <div class="panel panel-primary">
                         <div class="panel-heading">

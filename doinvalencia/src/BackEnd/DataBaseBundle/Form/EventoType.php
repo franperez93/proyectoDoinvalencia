@@ -25,6 +25,7 @@ class EventoType extends AbstractType
             ->add('precioReserva')
             ->add('tags')
             ->add('tipoEventoId')
+            ->add('imagen')
         ;
     }
     

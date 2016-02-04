@@ -8,13 +8,17 @@ class DefaultController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('DawplantillaBundle:Default:index.html.twig');
+        $em = $this->getDoctrine()->getManager();
+
+        $eventos = $em->getRepository('BackEndDataBaseBundle:Evento')->findAll();
+
+        return $this->render('DawplantillaBundle:Default:index.html.twig',array(
+            'eventos' => $eventos));
     }
     
-     public function mieventoAction()
+    public function mieventoAction()
     {
         return $this->render('DawplantillaBundle:Default:mievento.html.twig');
     }
-    
     
 }
