@@ -6,10 +6,10 @@
         
         <meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1.0 maximum-scale=1.0, minimum-scale=1.0">
 
-        <link href="css/reset.css" rel="stylesheet">
-        <link href="css/style.css" rel="stylesheet">
+        <link href="{{asset('bundles/dawplantilla/css/reset.css')}}" rel="stylesheet">
+        <link href="{{asset('bundles/dawplantilla/css/style.css')}}" rel="stylesheet">
 
-        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+        <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
         <link rel="stylesheet" href="{{asset('bundles/dawplantilla/css/estilo.css')}}" type="text/css" />
 
@@ -34,32 +34,32 @@
         <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed toggle-nav" id="bars" data-toggle="collapse" data-target="#navegacionBar">
+                    <button type="button" class="navbar-toggle collapsed toggle-nav" id="bars" data-toggle="collapse" data-target="#canvas">
                         <span class="sr-only">Desplegar menu</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a href="#" class="navbar-brand">DoInValencia</a>
+                    <a href="{{ path('dawplantilla_homepage') }}" class="navbar-brand">DoInValencia</a>
                 </div>
                 <!--Iniciamos aqui el menu-->
-                <div class="collapse navbar-collapse" id="navegacionBar">
+                <div class="collapse navbar-collapse .hidden-sm hidden-md">
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="{{ path('dawplantilla_homepage') }}">Inicio</a></li>
-                        <li><a href="#">Pagina 1</a></li>
-                        <li><a href="#">Pagina 2</a></li>
+                        <li><a href="evento">Eventos</a></li>
                         <li class="dropdown elementos">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
-                            Elementos <span class="caret"></span>
+                            Categorias <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu" role="menu">
-                                <li><a href="#">Elemento 1</a></li>
+                                <li><a href="#">Deportivos</a></li>
                                 <li class="divider"></li>
-                                <li><a href="#">Elemento 2</a></li>
+                                <li><a href="#">Musicales</a></li>
                                 <li class="divider"></li>
-                                <li><a href="#">Elemento 3</a></li>
+                                <li><a href="#">Ocio</a></li>
                             </ul>
                         </li>
+                        <li><a href="#">Contacto</a></li>
                     </ul>
                     <!--parte derecha del menu-->
                     <div class="navbar-text navbar-right">
@@ -71,61 +71,73 @@
         </nav>    
 
         <div id="container">
-
-        <div id="canvas">
-
-            <div id="nav">
-                    <h2 id="title"><i class="fa fa-sitemap"></i> MENU</h2>
+        
+            <div id="canvas">
+        
+                <div id="nav">
+                    <h2 id="title"><i class="fa fa-sitemap"></i> DoInValencia </h2>
                          <ul id="toggle">
-        <li>
-            <div class="active border">
-                <span class="menu-icons fa fa-home"></span>   <a href="#">HOME</a>
+                            <li>
+                                <div class="active border">
+                                    <span class="menu-icons fa fa-home"></span><a href="{{ path('dawplantilla_homepage') }}">HOME</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <span class="menu-icons fa fa-book"></span><a href="evento">EVENTOS</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <span class="menu-icons fa fa-sort-amount-desc"></span>   <a href="#">CATEGORIAS</a>
+                                    <span class="the-btn fa fa-plus"></span>
+                                </div>
+                                    <ul>
+                                        <li>
+                                            <a href="#">DEPORTES</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">MUSICA</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">OCIO</a>
+                                        </li>
+                                    </ul>
+                            </li>
+                            <li>
+                                <div>
+                                    <span class="menu-icons  fa fa-rocket"></span>   <a href="#">ABOUT US</a>
+                                    <span class="the-btn fa fa-plus"></span>
+                                </div>
+                                    <ul>
+                                        <li>
+                                            <a href="#">OUR TEAM</a>
+                                        </li>
+                                    </ul>
+                            </li>
+                            <li>
+                                <div>
+                                    <span class="menu-icons  fa fa-envelope"></span>
+                                          <a href="#">CONTACT</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <span class="menu-icons  fa fa-user"></span>
+                                          <a href="#">SIGN IN</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <span class="menu-icons fa fa-pencil"></span>
+                                          <a href="#">SIGN UP</a>
+                                </div>
+                            </li>
+                        </ul>
+                 </div>
             </div>
-        </li>
+        </div>
 
-        <li>
-            <div>
-                <span class="menu-icons  fa fa-user"></span>   <a href="#">ABOUT US</a>
-                <span class="the-btn fa fa-plus"></span>
-                </div>
-
-            <ul>
-                <li>
-                    <a href="#">OUR TEAM</a>
-                </li>
-
-                <li>
-                    <a href="#">OUR SERVICES</a>
-                </li>
-            </ul>
-
-        </li>
-
-        <li>
-            <div>
-                <span class="menu-icons  fa fa-briefcase"></span>
-                    <a href="#">PORTFOLIO</a><span class="the-btn fa fa-plus"></span>
-            </div>
-
-            <ul>
-                <li>
-                    <a href="#">WEB DESIGN</a>
-                </li>
-
-                <li>
-                    <a href="#">GRAPHIC DESIGN</a>
-                </li>
-            </ul>
-        </li>
-
-        <li>
-            <div>
-                <span class="menu-icons  fa fa-envelope"></span>
-                      <a href="#">CONTACT</a>
-            </div>
-        </li>
-    </ul>
-             </div>
     </header>
     
         {% block body %}
@@ -148,13 +160,13 @@
                 </div>
             </div>
         </div>
-    </footer>
+        </footer>
     
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
         <script src="{{asset('bundles/dawplantilla/js/script.js')}}"></script>
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <script src="js/custom.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="{{asset('bundles/dawplantilla/js/custom.js')}}"></script>
         {% block javascripts %}{% endblock %}
     </body>
 </html>

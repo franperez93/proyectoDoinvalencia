@@ -1,7 +1,7 @@
 /* -- Cuerpo --*/
 body{
    /* background:#D9C9C9;*/
-    font-family:verdana;
+  
 }
 
 /*--HEADER--*/
@@ -52,10 +52,6 @@ body{
     padding-top:30px;
 }
 
-.imagen{
-    
-    height: 550px;
-}
 
 
 /* -- MEdia QUerie -- para diseño responsive */
