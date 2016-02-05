@@ -21,8 +21,8 @@
                 <div class="form-group">
                    {{form_widget(form.plainPassword.second)}}
                 </div>
-                 <br> 
-               <div>
+                 <br>
+                <div>
                     <input type="submit" class="btn btn-primary" value="Registrar" />
                </div>
            {{ form_end(form) }} 
@@ -30,3 +30,14 @@
     </div>
 </div>
     
+{% block javascripts %}
+
+<script>
+    
+     $(document).ready(function(){
+        $("input").prop("class","form-control");
+    });
+    
+</script>
+
+{% endblock %}
