@@ -59,7 +59,7 @@
                                 <li><a href="#">Ocio</a></li>
                             </ul>
                         </li>
-                        <li><a href="#">Contacto</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#contactoModal">Contacto</a></li>
                     </ul>
                     <!--parte derecha del menu-->
                     <div class="navbar-text navbar-right">
@@ -118,7 +118,7 @@
                             <li>
                                 <div>
                                     <span class="menu-icons  fa fa-envelope"></span>
-                                          <a href="#">CONTACT</a>
+                                          <a href="#" data-toggle="modal" data-target="#contactoModal">CONTACT</a>
                                 </div>
                             </li>
                             <li>
@@ -137,6 +137,40 @@
                  </div>
             </div>
         </div>
+        
+                <!-- Modal -->
+          <div class="modal fade" id="contactoModal" role="dialog">
+            <div class="modal-dialog">
+            
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Completa el formulario</h4>
+                </div>
+                <div class="modal-body">
+                  <form class="form-horizontal" role="form">
+                      <div class="input-group">
+                         <div class="input-group-addon">
+                         <span class="glyphicon glyphicon-user"></span>
+                         </div>
+                         <input type="email" class="form-control" id="Email_user" placeholder="Email">
+                     </div>
+                     <div class="input-group">
+                         <div class="input-group-addon">
+                         <span class="glyphicon glyphicon-envelope"></span>
+                         </div>
+                         <textarea class="form-control" rows="5" id="comment" placeholder="Mensage..."></textarea>
+                      </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-info" data-dismiss="modal">Enviar</button>
+                </div>
+              </div>
+              </form>
+            </div>
+          </div>
 
     </header>
     
