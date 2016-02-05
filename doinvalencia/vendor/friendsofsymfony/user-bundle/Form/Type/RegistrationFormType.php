@@ -41,7 +41,7 @@ class RegistrationFormType extends AbstractType
                 'second_options' => array('label' => 'Confirmar Contraseña'),
                 'invalid_message' => 'fos_user.password.mismatch',
             ))
-            ->add('roles', 'choice', array('label' => ' ','attr' => array('hidden'=> true), 
+            ->add('roles', 'choice', array('label' => ' ','attr' => array('hidden'=> false), 
                            'choices' => array( 'ROLE_ADMIN' => 'ADMINISTRADOR','ROLE_SUPERADMIN' => 'SUPERADMINISTRADOR', 
                                                'ROLE_USER' => 'USUARIO'), 'multiple' => true))
         ;

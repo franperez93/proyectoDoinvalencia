@@ -7,6 +7,9 @@
         <meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1.0 maximum-scale=1.0, minimum-scale=1.0">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
         <link rel="stylesheet" href="{{asset('bundles/dawplantilla/css/estilo.css')}}" type="text/css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="{{asset('bundles/dawplantilla/js/script.js')}}"></script>
        
         {% block stylesheets %}{% endblock %}
         
@@ -118,11 +121,11 @@
             </div>
         </div>
     </footer>
+       
     
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-        <script src="{{asset('bundles/dawplantilla/js/script.js')}}"></script>
-        <script src="{{asset('bundles/dawplantilla/js/jquery-2.1.4.min.js')}}"></script>
-        {% block javascripts %}{% endblock %}
+        
+        {% block javascripts %}
+        
+        {% endblock %}
     </body>
 </html>

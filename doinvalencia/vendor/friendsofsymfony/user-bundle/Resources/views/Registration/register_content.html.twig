@@ -6,24 +6,43 @@
     <h1>Registro</h1>
     <div class="row">
         <div class="col-md-4 col-md-offset-1">
-            {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register '}}) }}
+            {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register form-horizontal'}}) }}
   
                 <div class="form-group">
-                    <label></label>
-                    {{form_widget(form.email)}}
+                   <label for="inputType" class="col-md-3 control-label">Email</label>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                        {{form_widget(form.email)}}
+                    </div>
+                </div>    
+                <div class="form-group">
+                  <label for="inputType" class="col-md-3 control-label">Usuario</label>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        {{form_widget(form.username)}}
+                    </div>
                 </div>
                 <div class="form-group">
-                   {{form_widget(form.username)}}
+                   <label for="inputType" class="col-md-3 control-label">Contraseña</label>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                        {{form_widget(form.plainPassword.first)}}
+                    </div>
+                </div>  
+                <div class="form-group">
+                   <label for="inputType" class="col-md-3 control-label">Confirmar Contraseña</label>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                        {{form_widget(form.plainPassword.second)}}
+                    </div>
                 </div>
                 <div class="form-group">
-                   {{form_widget(form.plainPassword.first)}}
-                </div>
-                <div class="form-group">
-                   {{form_widget(form.plainPassword.second)}}
+                   <label for="inputType" class="col-md-3 control-label">Rol</label>
+                        {{form_widget(form.roles)}}
                 </div>
                  <br>
                 <div>
-                    <input type="submit" class="btn btn-primary" value="Registrar" />
+                    <input type="submit" class="btn btn-primary" value="Registrar"/>
                </div>
            {{ form_end(form) }} 
        </div>
@@ -35,7 +54,10 @@
 <script>
     
      $(document).ready(function(){
-        $("input").prop("class","form-control");
+        
+        $("input").prop("class","form-control")
+        $("input:submit").prop("class","btn btn-primary")
+       
     });
     
 </script>
