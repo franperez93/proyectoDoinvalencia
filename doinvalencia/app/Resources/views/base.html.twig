@@ -63,7 +63,7 @@
                     </ul>
                     <!--parte derecha del menu-->
                     <div class="navbar-text navbar-right">
-                        <a href="#" class="btn btn-xs btn-primary"><span class="glyphicon glyphicon-user"></span> Usuario</a>
+                        <a href="{{path('fos_user_security_login')}}" class="btn btn-xs btn-primary"><span class="glyphicon glyphicon-user"></span> Usuario</a>
                         <a href="#" class="btn btn-xs btn-danger"><span class="glyphicon glyphicon-log-out"></span> Salir</a>
                     </div>
                 </div>
@@ -167,10 +167,8 @@
                   <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                   <button type="button" class="btn btn-info" data-dismiss="modal">Enviar</button>
                 </div>
+                </form>
               </div>
-              </form>
-            </div>
-          </div>
 
     </header>
     
@@ -201,6 +199,7 @@
         <script src="{{asset('bundles/dawplantilla/js/script.js')}}"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script src="{{asset('bundles/dawplantilla/js/custom.js')}}"></script>
+        <script src="{{asset('bundles/dawplantilla/js/jquery-2.1.4.min.js')}}"></script>
         {% block javascripts %}{% endblock %}
     </body>
 </html>

@@ -1,4 +1,4 @@
-{% extends 'base.html.twig' %}
+{% extends "FOSUserBundle::layout.html.twig" %}
 
 {% block body %}
    
@@ -9,17 +9,15 @@
                 <div class="indice">
                     <ol class="breadcrumb">
                         <!--son referencias de ejemplo.. en este caso solo estaria inicio ya que estamos en la principal-->
-                        <li><a href="{{ path('dawplantilla_homepage') }}">Inicio</a></li>
+                        <li><a href="{{ path('back_end_data_base_homepage') }}">Inicio</a></li>
                         <li><a href="{{ path('evento_index') }}">Eventos</a></li>
                         <li class="active">{{ evento.nombre }}</li>
                     </ol>
                 </div>
                 <!-- Articulo 1-->
                 <article class="post clearfix">
-                
-                    
                         <a href="#" class="thumb">
-                            <img class="img-thumbnail imagen" src="{{asset('bundles/dawplantilla/images/prueba/bootstrap.png')}}"></img>
+                            <img class="img-thumbnail imagen" src="{{ evento.imagen}}"></img>
                         </a>
                     <div class="panel panel-primary">
                         <div class="panel-heading">

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}{% endblock %}</title>
+        
+        <meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1.0 maximum-scale=1.0, minimum-scale=1.0">
+                <link href="{{asset('bundles/dawplantilla/css/reset.css')}}" rel="stylesheet">
+        <link href="{{asset('bundles/dawplantilla/css/style.css')}}" rel="stylesheet">
+
+        <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{{asset('bundles/dawplantilla/css/estilo.css')}}" type="text/css" />
+       
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="{{asset('bundles/dawplantilla/js/script.js')}}"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="{{asset('bundles/dawplantilla/js/custom.js')}}"></script>
+        <script src="{{asset('bundles/dawplantilla/js/jquery-2.1.4.min.js')}}"></script>
+       
+        {% block stylesheets %}{% endblock %}
+        
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    
+    <body>
+        
+         <!--Aqui tenemos el jumbotron de la pagina web-->
+        <section class="jumbotron">
+            <div class="container">
+                <h1>DoInValencia</h1>
+                <p>Eventos que podemos encontrar en la provincia de valencia y alrededores</p>
+            </div>
+        </section>
+    
+        <!--Aqui se encuntra la barra de navegacion-->
+        <header>
+        <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed toggle-nav" data-toggle="collapse" data-target="#canvas">
+                        <span class="sr-only">Desplegar menu</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="#" class="navbar-brand">DoInValencia</a>
+                </div>
+                <!--Iniciamos aqui el menu-->
+                <div class="collapse navbar-collapse" id="navegacionBar">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="{{ path('back_end_data_base_homepage') }}">Inicio</a></li>
+                        <li><a href="evento">Eventos</a></li>
+                        <li class="dropdown elementos">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
+                            Categorias <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#">Deportivos</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Musicales</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Infantiles</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Gastronomía</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Tecnológico</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                    <!--parte derecha del menu-->
+                    <div class="navbar-text navbar-right">
+                        {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                        <a href="{{path('fos_user_profile_show')}}" class="btn btn-xs btn-primary"><span class="glyphicon glyphicon-user">
+                        </span> {{ app.user.username }} </a>
+                        
+                        <a href="{{ path('fos_user_security_logout') }}" class="btn btn-xs btn-danger">
+                            <span class="glyphicon glyphicon-log-out"></span>Salir
+                        </a>
+                         {% else %}
+            
+                        <a href="{{path('fos_user_security_login')}}" class="btn btn-xs btn-primary"><span class="glyphicon glyphicon-user"></span> Usuario</a>
+                        {% endif %}
+                        
+                    </div>
+                </div>
+            </div>
+        </nav> 
+        
+        <div id="container">
+        
+            <div id="canvas">
+        
+                <div id="nav">
+                    <h2 id="title"><i class="fa fa-sitemap"></i> DoInValencia </h2>
+                         <ul id="toggle">
+                            <li>
+                                <div class="active border">
+                                    <span class="menu-icons fa fa-home"></span><a href="{{ path('dawplantilla_homepage') }}">HOME</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <span class="menu-icons fa fa-book"></span><a href="evento">EVENTOS</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <span class="menu-icons fa fa-sort-amount-desc"></span>   <a href="#">CATEGORIAS</a>
+                                    <span class="the-btn fa fa-plus"></span>
+                                </div>
+                                    <ul>
+                                        <li>
+                                            <a href="#">DEPORTES</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">MUSICA</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">OCIO</a>
+                                        </li>
+                                    </ul>
+                            </li>
+                            <li>
+                                <div>
+                                    <span class="menu-icons  fa fa-rocket"></span>   <a href="#">ABOUT US</a>
+                                    <span class="the-btn fa fa-plus"></span>
+                                </div>
+                                    <ul>
+                                        <li>
+                                            <a href="#">OUR TEAM</a>
+                                        </li>
+                                    </ul>
+                            </li>
+                            <li>
+                                <div>
+                                    <span class="menu-icons  fa fa-envelope"></span>
+                                          <a href="#" data-toggle="modal" data-target="#contactoModal">CONTACT</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <span class="menu-icons  fa fa-user"></span>
+                                          <a href="#">SIGN IN</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <span class="menu-icons fa fa-pencil"></span>
+                                          <a href="#">SIGN UP</a>
+                                </div>
+                            </li>
+                        </ul>
+                 </div>
+            </div>
+        </div>
+        
+                <!-- Modal -->
+          <div class="modal fade" id="contactoModal" role="dialog">
+            <div class="modal-dialog">
+            
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Completa el formulario</h4>
+                </div>
+                <div class="modal-body">
+                  <form class="form-horizontal" role="form">
+                      <div class="input-group">
+                         <div class="input-group-addon">
+                         <span class="glyphicon glyphicon-user"></span>
+                         </div>
+                         <input type="email" class="form-control" id="Email_user" placeholder="Email">
+                     </div>
+                     <div class="input-group">
+                         <div class="input-group-addon">
+                         <span class="glyphicon glyphicon-envelope"></span>
+                         </div>
+                         <textarea class="form-control" rows="5" id="comment" placeholder="Mensage..."></textarea>
+                      </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-info" data-dismiss="modal">Enviar</button>
+                </div>
+                </form>
+              </div>
+
+    </header>
+    
+        {% block body %}
+        
+        {% endblock %}
+        
+    
+        </div>
+        {% if app.request.hasPreviousSession %}
+            {% for type, messages in app.session.flashbag.all() %}
+                {% for message in messages %}
+                    <div class="flash-{{ type }}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endfor %}
+        {% endif %}
+
+        <div>
+            {% block fos_user_content %}
+            {% endblock fos_user_content %}
+        </div>
+        
+        
+       <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-6">
+                    <p>Esto es el footer de la web</p> 
+                </div>
+                <div class="col-xs-6">
+                    <ul class="list-inline text-right lista-footer">
+                        <li><a href="#">prueba 1</a></li>
+                        <li><a href="#">prueba 2</a></li>
+                        <li><a href="#">prueba 3</a></li>
+                    </ul> 
+                </div>
+            </div>
+        </div>
+    </footer>
+       
+    
+        
+        {% block javascripts %}
+        
+        {% endblock %}
+    </body>
+</html>

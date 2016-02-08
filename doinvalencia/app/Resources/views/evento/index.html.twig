@@ -1,4 +1,4 @@
-{% extends 'base.html.twig' %}
+{% extends "FOSUserBundle::layout.html.twig" %}
 
 {% block body %}
  <section class="main container">
@@ -8,16 +8,16 @@
             <div class="indice">
                 <ol class="breadcrumb">
                     <!--son referencias de ejemplo.. en este caso solo estaria inicio ya que estamos en la principal-->
-                    <li><a href="{{ path('dawplantilla_homepage') }}">Inicio</a></li>
+                    <li><a href="{{ path('back_end_data_base_homepage') }}">Inicio</a></li>
                     <li class="active">Eventos</li>
                 </ol>
             </div>   
                 
                 {% for evento in eventos %}
-                
+                <div class="row">
                 <article class="post clearfix">
                     <a href="#" class="thumb pull-left">
-                        <img class="img-thumbnail" src="{{asset('bundles/dawplantilla/images/prueba/html.png')}}"></img>
+                        <img class="img-thumbnail" src="{{evento.imagen}}"></img>
                     </a>
                     <h2 class="post-tittle">
                         <a href="{{ path('evento_show', { 'id': evento.id }) }}">{{ evento.nombre }}</a>
@@ -37,11 +37,11 @@
                     </div>
                    
                 </article>
-                     
+                </div>
                 {% endfor %}
                 
-            <nav>
-                <div clas="center-block">
+             <!--<nav>
+               <div clas="center-block">
                     <ul class="pagination">
                         <li class="disabled"><a href="#">&laquo;<span class="sr-only">Anterior</span></a></li>
                         <li class="active"><a href="#">1</a></li>
@@ -52,24 +52,17 @@
                         <li><a href="#">&raquo;<span class="sr-only">Siguiente</span></a></li>
                     </ul>
                 </div>  
-            </nav>
+            </nav>-->
         </section>
             
         <!--Seccion secundaria Barra lateral-->
             <aside class="col-md-3 hidden-xd hidden-sm">
-                
+                {% if is_granted("ROLE_ADMIN") %}
                 <h2>Algo temporal</h2>
                 <a href="{{ path('evento_new') }}" class="btn btn-warning"><b>Create a new entry</b></a>
+                {% endif %}
 
-                <h4>Clase</h4>
-                <div class=="list-group">
-                    <a href="#" class="list-group-item active">Fran</a>
-                    <a href="#" class="list-group-item">Emilio</a>
-                    <a href="#" class="list-group-item">Victor</a>
-                    <a href="#" class="list-group-item">Raul cabron</a>
-                    <a href="#" class="list-group-item">Josep maricon</a>
-                </div>
-                <h4>Articulos recientes</h4>
+                <h4>Proximos Eventos</h4>
                 {% for evento in eventos %}
                     <a href="{{ path('evento_show', { 'id': evento.id }) }}" class="list-group-item">
                         <h4 class="list-group-item-heading">{{ evento.nombre }}</h4>

@@ -8,6 +8,12 @@ class DefaultController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('BackEndDataBaseBundle:Default:index.html.twig');
+        
+         $em = $this->getDoctrine()->getManager();
+
+        $eventos = $em->getRepository('BackEndDataBaseBundle:Evento')->findAll();
+
+        return $this->render('BackEndDataBaseBundle:Default:home.html.twig',array(
+            'eventos' => $eventos));
     }
 }

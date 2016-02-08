@@ -90,6 +90,13 @@ class Evento
      * @ORM\Column(name="tipo_evento_id", type="integer")
      */
     private $tipoEventoId;
+    
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="imagen", type="string")
+     */
+    private $imagen;
 
 
     /**
@@ -331,4 +338,29 @@ class Evento
     {
         return $this->tipoEventoId;
     }
+    
+    /**
+     * Get imagen
+     *
+     * @return string 
+     */
+    public function getImagen()
+    {
+        return $this->imagen;
+    }
+    
+    /**
+     * Set tipoImagen
+     *
+     * @param string $imagen
+     * @return imagen
+     */
+    public function setImagen($imagen)
+    {
+        $this->imagen = $imagen;
+
+        return $this;
+    }
+
+
 }
