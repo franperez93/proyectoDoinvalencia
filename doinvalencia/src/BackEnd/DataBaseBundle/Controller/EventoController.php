@@ -23,12 +23,13 @@ class EventoController extends Controller
         $em = $this->getDoctrine()->getManager();
 
         $eventos = $em->getRepository('BackEndDataBaseBundle:Evento')->findAll();
-
+         
         return $this->render('evento/index.html.twig', array(
-            'eventos' => $eventos,
+            'eventos' => $eventos
+            
         ));
     }
-
+    
     /**
      * Creates a new Evento entity.
      *

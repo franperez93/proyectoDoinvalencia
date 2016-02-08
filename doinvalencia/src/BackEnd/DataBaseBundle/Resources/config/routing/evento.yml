@@ -22,3 +22,5 @@ evento_delete:
     path:     /{id}/delete
     defaults: { _controller: "BackEndDataBaseBundle:Evento:delete" }
     methods:  DELETE
+    
+

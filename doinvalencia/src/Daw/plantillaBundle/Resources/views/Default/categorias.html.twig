@@ -1,0 +1,37 @@
+{% extends "FOSUserBundle::layout.html.twig" %}
+
+{% block body %}
+
+    {% for eventoDep in eventosDep %}
+            
+        <section class="main container"> 
+            <div class="row">
+                <article class="post clearfix">
+                    <a href="#" class="thumb pull-left">
+                        <img class="img-thumbnail" src="{{eventoDep.imagen}}"></img>
+                    </a>
+                    <h2 class="post-tittle">
+                        <a href="{{ path('evento_show', { 'id': eventoDep.id }) }}">{{ eventoDep.nombre }}</a>
+                    </h2>
+                    <p class="post-contenido text-justify">{{ eventoDep.informacion }}</p>
+                    <p class="post-contenido text-justify"><b>Localizacion: </b>{{ eventoDep.localizacion }}</p>
+                    <p class="post-contenido text-justify"><b>Ciudad: </b>{{ eventoDep.ciudad }}</p>
+                    <p class="post-contenido text-justify"><b>Fecha: </b>{% if eventoDep.fecha %}{{ eventoDep.fecha|date('Y-m-d') }}{% endif %}</p>
+                    <p class="post-contenido text-justify"><b>Hora: </b>{% if eventoDep.fecha %}{{ eventoDep.fecha|date('H:i:s') }}{% endif %}</p>
+                    <br>
+                    <a href="#"><i>{{ eventoDep.tags }}</i></a>
+                    
+                    <div class="contenedor-botones">
+                        <br>
+                        <a href="#" class="btn btn-success">Comentar <span class="badge">20</span></a>
+                         {% if is_granted("ROLE_ADMIN") %}
+                        <a href="{{ path('evento_edit', { 'id': eventoDep.id }) }}" class="btn btn-primary">Editar</a>
+                        {% endif %}
+                    </div>
+                   
+                </article>
+                </div>
+        </section>        
+    {% endfor %}
+
+{% endblock %}
