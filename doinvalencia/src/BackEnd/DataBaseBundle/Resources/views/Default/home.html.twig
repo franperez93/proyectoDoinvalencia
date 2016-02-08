@@ -5,7 +5,29 @@
 
 {% block body %}
 
-    
+    <section class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="carousel slide" id="home-carousel" data-ride="carousel">
+                    <div class="carousel-inner">
+                         <div class="item active">
+                            <img src="{{asset('bundles/dawplantilla/images/image3.jpg')}}" alt="image3" />
+                        </div>
+                         {% for evento in eventos %}
+                            <div class="item">
+                                <img href="{{ path('evento_show', { 'id': evento.id }) }}" src="{{evento.imagen}}"/>
+                                <div class="carousel-caption">
+                                    <h3>{{evento.nombre}}</h3>
+                                </div>
+                            </div>
+                         {% endfor %}
+                    </div>
+                    <a class="carousel-control left" href="#home-carousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></a>
+                    <a class="carousel-control right" href="#home-carousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></a>
+                </div>
+            </div>    
+        </div>
+    </section>
     <!--Aqui se encuntra el contenido de ejemplo para la parte principal-->
     <section class="main container">
         <div class="row">
@@ -18,44 +40,42 @@
                     </ol>
                 </div>
                 -->
-                <div class="neighborhood-guides">
+                
                 <div class="container">
-                    <h2>Ejemplo Eventos Thumbnail</h2>
+                    <h2>Categorias de Eventos</h2>
                     
-                    <p>Tenemos eventos para todas las edades y gustos, ordenados por categorias o localización.</p>
+                    <p>Aqui puedes encontrar los eventos separados por sus respectivas categorias</p>
                     <div class="row">
-                      <div class="col-md-4">
-                          <div class="thumbnail">
-                            <a href="evento"><img src="{{asset('bundles/dawplantilla/images/prueba/mexico-city.png')}}" ></a>
+                          <div class="col-md-4">
+                            <div class="thumbnail imgCategorias">
+                                <a href="#"><img src="http://i.imgur.com/WqTWoSo.jpg" ></a>
+                            </div>
+                            <div class="thumbnail imgCategorias">
+                                <a href="#"><img src="http://i.imgur.com/InjQD9a.jpg" ></a>
+                            </div>
                           </div>
-                          <div class="thumbnail">
-                            <a href="evento"><img src="{{asset('bundles/dawplantilla/images/prueba/ny.png')}}" ></a>
+                          <div class="col-md-4">
+                              <div class="thumbnail imgCategorias">
+                                <a href="#"><img src="http://i.imgur.com/5MjOcc0.jpg" ></a>
+                              </div>
+                              <div class="thumbnail imgCategorias">
+                                <a href="#"><img src="http://i.imgur.com/d70MbKf.jpg}" ></a>
+                              </div>
+                          </div><br><br><br><br><br>
+                          <div class="col-md-4">
+                                <div class="thumbnail imgCategorias">
+                                     <a href="#"><img src="http://i.imgur.com/O1qGRva.jpg" ></a>
+                                
+                                </div>
                           </div>
-                      </div>
-                      <div class="col-md-4">
-                          <div class="thumbnail">
-                            <a href="evento"><img src="{{asset('bundles/dawplantilla/images/prueba/tokyo.png')}}" ></a>
-                          </div>
-                          <div class="thumbnail">
-                            <a href="evento"><img src="{{asset('bundles/dawplantilla/images/prueba/paris.png')}}" ></a>
-                          </div>
-                      </div>
                     </div>
                   </div>
-                </div>
+                
             </section>
-            <!--Seccion secundaria Barra lateral-->
-            <aside class="col-md-3 hidden-xd hidden-sm">
-                <h4>Proximos Eventos</h4>
-                {% for evento in eventos %}
-                    <a href="{{ path('evento_show', { 'id': evento.id }) }}" class="list-group-item">
-                        <h4 class="list-group-item-heading">{{ evento.nombre }}</h4>
-                        <p class="list-group-item-text">Mas informacion</p>
-                    </a>
-                {% endfor %}
-            </aside>
         </div>
     </section>
+    
+    
 {% endblock %}
         
         

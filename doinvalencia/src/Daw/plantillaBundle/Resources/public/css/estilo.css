@@ -32,8 +32,9 @@ body{
     width: 40%;
 }
 
-.post .thumb img{
+.post .thumbnail img{
     width: 100%;
+   
 }
 
 .post .contenedor-botones{
@@ -51,6 +52,20 @@ body{
     margin-top:30px;
     padding-top:30px;
 }
+
+/*-------------Carrousel y thumbnails-------------*/
+
+.imgCategorias img{
+    
+    width: 100%;
+    max-width:100%;
+     
+    height:auto;
+    
+}
+
+
+/*----------------------------------*/
 
 
 
