@@ -5,3 +5,8 @@ dawplantilla_homepage:
 prueba_homepage:    
     path:     /mievento
     defaults: { _controller: DawplantillaBundle:Default:mievento }
+    
+categoria_hompage:
+    path:   /categoria/{id}
+    defaults: {_controller: DawplantillaBundle:Default:categoria}
+    methods:  GET
