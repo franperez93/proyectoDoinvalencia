@@ -80,13 +80,7 @@
             </div>
         </nav> 
 
-    </header>
-    
-        {% block body %}
-        
-        {% endblock %}
-        
-    
+
         </div>
         {% if app.request.hasPreviousSession %}
             {% for type, messages in app.session.flashbag.all() %}
@@ -102,6 +96,12 @@
             {% block fos_user_content %}
             {% endblock fos_user_content %}
         </div>
+
+    </header>
+    
+        {% block body %}
+        
+        {% endblock %}
         
         
        <footer class="site-footer">

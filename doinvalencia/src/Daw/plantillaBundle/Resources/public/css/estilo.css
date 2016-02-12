@@ -15,6 +15,16 @@ body{
     margin-bottom:0;
 }
 
+#jumboPerfil{
+    
+    margin-top:-20px;
+    background-color: lightblue;
+    text-align :center;
+    color:black;
+    
+}
+
+
 /* -- POST -- */
 
 .main{
@@ -50,7 +60,6 @@ body{
     
     background-color:#222;
     color:#fff;
-    margin-top:30px;
     padding-top:30px;
 }
 

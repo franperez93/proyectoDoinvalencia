@@ -1,6 +1,14 @@
 {% trans_default_domain 'FOSUserBundle' %}
 
 <div class="fos_user_user_show">
-    <p>{{ 'profile.show.username'|trans }}: {{ user.username }}</p>
-    <p>{{ 'profile.show.email'|trans }}: {{ user.email }}</p>
+   
+    <div class="jumbotron" id="jumboPerfil">
+            <h2><b>Perfil de Usuario</b></h2>
+            <img class="img-circle" src="{{asset('bundles/dawplantilla/images/imagen.png')}}"></img>
+    
+            <address>
+				<p><strong>{{ user.username }}</strong></p>
+			    <p>{{ user.email }}</p>
+			</address>
+        </div>
 </div>
