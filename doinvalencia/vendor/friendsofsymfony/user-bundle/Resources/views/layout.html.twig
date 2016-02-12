@@ -19,6 +19,7 @@
         <script src="{{asset('bundles/dawplantilla/js/custom.js')}}"></script>
         <script src="{{asset('bundles/dawplantilla/js/jquery-2.1.4.min.js')}}"></script>
        
+
         {% block stylesheets %}{% endblock %}
         
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
@@ -50,22 +51,22 @@
                 <!--Iniciamos aqui el menu-->
                 <div class="collapse navbar-collapse" id="navegacionBar">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="{{ path('back_end_data_base_homepage') }}">Inicio</a></li>
+                        <li><a href="{{ path('back_end_data_base_homepage') }}">Inicio</a></li>
                         <li><a href="{{ path('evento_index') }}">Eventos</a></li>
                         <li class="dropdown elementos">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
                             Categorias <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu" role="menu">
-                                <li><a href="#">Deportivos</a></li>
+                                <li><a href="{{ path('categoria_hompage', { 'id': '1' }) }}">Deportivos</a></li>
                                 <li class="divider"></li>
-                                <li><a href="#">Musicales</a></li>
+                                <li><a href="{{ path('categoria_hompage', { 'id': '2' }) }}">Musicales</a></li>
                                 <li class="divider"></li>
-                                <li><a href="#">Infantiles</a></li>
+                                <li><a href="{{ path('categoria_hompage', { 'id': '3' }) }}">Infantiles</a></li>
                                 <li class="divider"></li>
-                                <li><a href="#">Gastronomía</a></li>
+                                <li><a href="{{ path('categoria_hompage', { 'id': '4' }) }}">Gastronomía</a></li>
                                 <li class="divider"></li>
-                                <li><a href="#">Tecnológico</a></li>
+                                <li><a href="{{ path('categoria_hompage', { 'id': '5' }) }}">Tecnológico</a></li>
                             </ul>
                         </li>
                         <li><a href="#">Contacto</a></li>
@@ -189,13 +190,7 @@
                 </form>
               </div>
 
-    </header>
-    
-        {% block body %}
-        
-        {% endblock %}
-        
-    
+
         </div>
         {% if app.request.hasPreviousSession %}
             {% for type, messages in app.session.flashbag.all() %}
@@ -211,6 +206,12 @@
             {% block fos_user_content %}
             {% endblock fos_user_content %}
         </div>
+
+    </header>
+    
+        {% block body %}
+        
+        {% endblock %}
         
         
        <footer class="site-footer">
@@ -220,20 +221,21 @@
                     <p>Esto es el footer de la web</p> 
                 </div>
                 <div class="col-xs-6">
-                    <ul class="list-inline text-right lista-footer">
+                    <ul class="nav navbar fixed-bottom text-right lista-footer">
                         <li><a href="#">prueba 1</a></li>
                         <li><a href="#">prueba 2</a></li>
-                        <li><a href="#">prueba 3</a></li>
                     </ul> 
                 </div>
             </div>
         </div>
     </footer>
        
-    
-        
-        {% block javascripts %}
-        
+        {% block javascripts %} 
+            
+            
+            
+            
         {% endblock %}
+        
     </body>
 </html>

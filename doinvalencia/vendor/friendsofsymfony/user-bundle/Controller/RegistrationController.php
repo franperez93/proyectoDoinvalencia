@@ -62,7 +62,8 @@ class RegistrationController extends Controller
 
             if (null === $response = $event->getResponse()) {
                 $url = $this->generateUrl('fos_user_registration_confirmed');
-                $response = new RedirectResponse($url);
+                $miurl = $this->generateUrl('back_end_data_base_homepage');
+                $response = new RedirectResponse($miurl);
             }
 
             $dispatcher->dispatch(FOSUserEvents::REGISTRATION_COMPLETED, new FilterUserResponseEvent($user, $request, $response));

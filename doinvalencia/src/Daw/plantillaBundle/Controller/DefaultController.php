@@ -25,14 +25,14 @@ class DefaultController extends Controller
      * Lists de eventos por categoria
      *
      */
-    public function categoriaAction()
+    public function categoriaAction($id)
     {
         $em = $this->getDoctrine()->getManager();
         
          $eventos = $em->getRepository('BackEndDataBaseBundle:Evento')->findAll();
          $eventosDep = $em->getRepository('BackEndDataBaseBundle:Evento')->findBy(
              array(
-                'tipoEventoId'=> '2' )
+                'tipoEventoId'=> $id )
              );
 
         return $this->render('DawplantillaBundle:Default:categorias.html.twig', array(
