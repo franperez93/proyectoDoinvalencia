@@ -1,21 +1,26 @@
 {% extends "FOSUserBundle::layout.html.twig" %}
 
 {% block body %}
-    <h1>Evento edit</h1>
+
+<div class="container">
+   
+    <h1>Editar Evento</h1>
 
     {{ form_start(edit_form) }}
         {{ form_widget(edit_form) }}
-        <input type="submit" value="Edit" />
+        <input class="btn btn-primary" type="submit" value="Editar" />
     {{ form_end(edit_form) }}
-
-    <ul>
-        <li>
-            <a href="{{ path('evento_index') }}">Back to the list</a>
-        </li>
-        <li>
+    <br>
+   
+        <div>        
+        
+            
             {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
+                <input class="btn btn-danger" type="submit" value="Eliminar">
+                <a class="btn btn-info" href="{{ path('evento_index') }}">Volver a la lista</a>
             {{ form_end(delete_form) }}
-        </li>
-    </ul>
+            
+        </div>   
+</div>            
+     
 {% endblock %}

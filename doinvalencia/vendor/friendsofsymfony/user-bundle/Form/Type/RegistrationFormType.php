@@ -32,16 +32,16 @@ class RegistrationFormType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('email', LegacyFormHelper::getType('Symfony\Component\Form\Extension\Core\Type\EmailType'), array('label' => 'Correo', 'translation_domain' => 'FOSUserBundle'))
-            ->add('username', null, array('label' => 'Usuario', 'translation_domain' => 'FOSUserBundle'))
+            ->add('email', LegacyFormHelper::getType('Symfony\Component\Form\Extension\Core\Type\EmailType'), array('label' => '', 'translation_domain' => 'FOSUserBundle'))
+            ->add('username', null, array('label' => '', 'translation_domain' => 'FOSUserBundle'))
             ->add('plainPassword', LegacyFormHelper::getType('Symfony\Component\Form\Extension\Core\Type\RepeatedType'), array(
                 'type' => LegacyFormHelper::getType('Symfony\Component\Form\Extension\Core\Type\PasswordType'),
                 'options' => array('translation_domain' => 'FOSUserBundle'),
-                'first_options' => array('label' => 'Contraseña'),
-                'second_options' => array('label' => 'Confirmar Contraseña'),
+                'first_options' => array('label' => ''),
+                'second_options' => array('label' => ''),
                 'invalid_message' => 'fos_user.password.mismatch',
             ))
-            ->add('roles', 'choice', array('label' => ' ','attr' => array('hidden'=> false), 
+            ->add('roles', 'choice', array('label' => ' ','attr' => array('hidden'=> true), 
                            'choices' => array( 'ROLE_ADMIN' => 'ADMINISTRADOR','ROLE_SUPERADMIN' => 'SUPERADMINISTRADOR', 
                                                'ROLE_USER' => 'USUARIO'), 'multiple' => true))
         ;

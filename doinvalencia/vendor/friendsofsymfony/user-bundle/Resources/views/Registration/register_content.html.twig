@@ -1,51 +1,42 @@
 {% trans_default_domain 'FOSUserBundle' %}
 
-
-<div class="container">
-    <br>
-    <h1>Registro</h1>
+<link rel="stylesheet" href="{{asset('bundles/dawplantilla/css/login.css')}}" type="text/css" />
+<div class="container" id="registro"><br>
     <div class="row">
-        <div class="col-md-4 col-md-offset-1">
-            {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register form-horizontal'}}) }}
-  
-                <div class="form-group">
-                   <label for="inputType" class="col-md-3 control-label">Email</label>
-                    <div class="input-group">
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-                        {{form_widget(form.email)}}
-                    </div>
-                </div>    
-                <div class="form-group">
-                  <label for="inputType" class="col-md-3 control-label">Usuario</label>
-                    <div class="input-group">
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                        {{form_widget(form.username)}}
-                    </div>
-                </div>
-                <div class="form-group">
-                   <label for="inputType" class="col-md-3 control-label">Contraseña</label>
-                    <div class="input-group">
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                        {{form_widget(form.plainPassword.first)}}
-                    </div>
+        <div class="col-md-4 col-md-offset-4">
+            <div class="panel panel-info registro">
+                <div class="panel-heading">
+			    	<h2 class="text-center">Registro</h2>
+			 	</div>
+			 	<div class="panel-body registro">
+                    {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register form-horizontal'}}) }}
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                            {{form_widget(form.email)}}
+                        </div>
+                        <br>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            {{form_widget(form.username)}}
+                        </div>
+                        <br>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                            {{form_widget(form.plainPassword.first)}}
+                        </div>
+                        <br>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                            {{form_widget(form.plainPassword.second)}}
+                        </div>
+                        <br>
+                        <div class="text-center">
+                            <input type="submit" value="Registrar"/>
+                        </div>
+                    {{ form_end(form) }} 
                 </div>  
-                <div class="form-group">
-                   <label for="inputType" class="col-md-3 control-label">Confirmar Contraseña</label>
-                    <div class="input-group">
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                        {{form_widget(form.plainPassword.second)}}
-                    </div>
-                </div>
-                <div class="form-group">
-                   <label for="inputType" class="col-md-3 control-label">Rol</label>
-                        {{form_widget(form.roles)}}
-                </div>
-                 <br>
-                <div>
-                    <input type="submit" class="btn btn-primary" value="Registrar"/>
-               </div>
-           {{ form_end(form) }} 
-       </div>
+            </div>       
+        </div>
     </div>
 </div>
     
@@ -56,6 +47,12 @@
      $(document).ready(function(){
         
         $("input").prop("class","form-control")
+        
+        $('#fos_user_registration_form_email').prop("placeholder","Correo de registro")
+        $('#fos_user_registration_form_username').prop("placeholder","Nombre de Usuario")
+        $('#fos_user_registration_form_plainPassword_first').prop("placeholder","Introducir Contraseña")
+        $('#fos_user_registration_form_plainPassword_second').prop("placeholder","Confirmar Contraseña")
+        
         $("input:submit").prop("class","btn btn-primary")
        
     });

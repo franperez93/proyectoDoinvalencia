@@ -1,6 +1,7 @@
 /* -- Cuerpo --*/
 body{
    /* background:#D9C9C9;*/
+   background-color:#E9E8E8;
   
 }
 
@@ -53,6 +54,11 @@ body{
     padding-top:30px;
 }
 
+#eventos{
+    background-color:#efefef;
+    padding-left:2em;
+    padding-right:1em;
+}
 /*-------------Carrousel y thumbnails-------------*/
 
 .imgCategorias img{
@@ -62,6 +68,13 @@ body{
      
     height:auto;
     
+}
+#carru{
+    background-color:#FFF;
+}
+
+#categ{
+    background-color:#efefef;
 }
 
 

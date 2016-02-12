@@ -14,7 +14,7 @@
             </div>   
 
                 {% for evento in eventos %}
-                <div class="row">
+                <div class="row" id="eventos">
                 <article class="post clearfix">
                     <a href="#" class="thumb pull-left">
                         <img class="img-thumbnail" src="{{evento.imagen}}"></img>
@@ -33,8 +33,8 @@
                     <div class="contenedor-botones">
                         <br>
                         <a href="#" class="btn btn-success">Comentar <span class="badge">20</span></a>
-                         {% if is_granted("ROLE_ADMIN") %}
-                        <a href="{{ path('evento_edit', { 'id': evento.id }) }}" class="btn btn-primary">Editar</a>
+                        {% if is_granted("ROLE_ADMIN") %}
+                        <a href="{{ path('evento_edit', { 'id': evento.id }) }}" class="btn btn-primary">Editar Evento</a>
                         {% endif %}
                     </div>
                    
@@ -60,8 +60,7 @@
         <!--Seccion secundaria Barra lateral-->
             <aside class="col-md-3 hidden-xd hidden-sm">
                 {% if is_granted("ROLE_ADMIN") %}
-                <h2>Algo temporal</h2>
-                <a href="{{ path('evento_new') }}" class="btn btn-warning"><b>Create a new entry</b></a>
+                <a href="{{ path('evento_new') }}" class="btn btn-warning"><b>Crear Nuevo Eventoy</b></a>
                 {% endif %}
 
                 <h4>Proximos Eventos</h4>
