@@ -1,6 +1,7 @@
 /* -- Cuerpo --*/
 body{
    /* background:#D9C9C9;*/
+   background-color:#E9E8E8;
   
 }
 
@@ -13,6 +14,16 @@ body{
     padding: 20px 0;
     margin-bottom:0;
 }
+
+#jumboPerfil{
+    
+    margin-top:-20px;
+    background-color: lightblue;
+    text-align :center;
+    color:black;
+    
+}
+
 
 /* -- POST -- */
 
@@ -32,8 +43,9 @@ body{
     width: 40%;
 }
 
-.post .thumb img{
+.post .thumbnail img{
     width: 100%;
+   
 }
 
 .post .contenedor-botones{
@@ -48,9 +60,34 @@ body{
     
     background-color:#222;
     color:#fff;
-    margin-top:30px;
     padding-top:30px;
 }
+
+#eventos{
+    background-color:#efefef;
+    padding-left:2em;
+    padding-right:1em;
+}
+/*-------------Carrousel y thumbnails-------------*/
+
+.imgCategorias img{
+    
+    width: 100%;
+    max-width:100%;
+     
+    height:auto;
+    
+}
+#carru{
+    background-color:#FFF;
+}
+
+#categ{
+    background-color:#efefef;
+}
+
+
+/*----------------------------------*/
 
 
 

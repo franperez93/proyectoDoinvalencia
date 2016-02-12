@@ -15,6 +15,7 @@ function toggleNavigation() {
     } else {
         // Open Nav
         $('#container').addClass('display-nav');
+        $('#container').css('z-index', '7');
     }
 }
 

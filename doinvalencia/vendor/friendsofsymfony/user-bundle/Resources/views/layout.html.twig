@@ -5,7 +5,6 @@
         <title>{% block title %}{% endblock %}</title>
         
         <meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1.0 maximum-scale=1.0, minimum-scale=1.0">
-                <link href="{{asset('bundles/dawplantilla/css/reset.css')}}" rel="stylesheet">
         <link href="{{asset('bundles/dawplantilla/css/style.css')}}" rel="stylesheet">
 
         <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
@@ -29,7 +28,7 @@
         
          <!--Aqui tenemos el jumbotron de la pagina web-->
         <section class="jumbotron">
-            <div class="container">
+            <div class="container" id="titulo">
                 <h1>DoInValencia</h1>
                 <p>Eventos que podemos encontrar en la provincia de valencia y alrededores</p>
             </div>
@@ -69,7 +68,7 @@
                                 <li><a href="{{ path('categoria_hompage', { 'id': '5' }) }}">Tecnológico</a></li>
                             </ul>
                         </li>
-                        <li><a href="#">Contacto</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#contactoModal">Contacto</a></li>
                     </ul>
                     <!--parte derecha del menu-->
                     <div class="navbar-text navbar-right">
@@ -189,7 +188,7 @@
                 </div>
                 </form>
               </div>
-
+            </div>
 
         </div>
         {% if app.request.hasPreviousSession %}
