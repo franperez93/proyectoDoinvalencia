@@ -10,6 +10,7 @@ $(function() {
 // The toggleNav function itself
 function toggleNavigation() {
     if ($('#container').hasClass('display-nav')) {
+        $('#container').css('z-index', '0');
         // Close Nav
         $('#container').removeClass('display-nav');
     } else {
