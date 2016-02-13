@@ -78,3 +78,19 @@ fos_user:
 services:
     fos_user.doctrine_registry:
         alias: doctrine
+
+
+assetic:
+    debug:          '%kernel.debug%'
+    use_controller: '%kernel.debug%'
+    filters:
+        cssrewrite: ~
+    bundles: [ "FOSCommentBundle" ]
+        
+        
+fos_comment:
+    db_driver: orm
+    class:
+        model:
+            comment: BackEnd\DataBaseBundle\Entity\Comment
+            thread: BackEnd\DataBaseBundle\Entity\Thread

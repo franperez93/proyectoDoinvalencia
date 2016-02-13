@@ -10,6 +10,7 @@ return array(
     $vendorDir . '/swiftmailer/swiftmailer/lib/swift_required.php',
     $vendorDir . '/paragonie/random_compat/lib/random.php',
     $vendorDir . '/ircmaxell/password-compat/lib/password.php',
+    $vendorDir . '/kriswallsmith/assetic/src/functions.php',
     $vendorDir . '/symfony/polyfill-php70/bootstrap.php',
     $vendorDir . '/symfony/polyfill-php56/bootstrap.php',
     $vendorDir . '/symfony/polyfill-php55/bootstrap.php',
