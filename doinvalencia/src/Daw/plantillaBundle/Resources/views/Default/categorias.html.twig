@@ -7,7 +7,7 @@
         <section class="main container"> 
             <div class="row">
                 <article class="post clearfix">
-                    <a href="#" class="thumb pull-left">
+                    <a href="{{ path('evento_show', { 'id': eventoDep.id }) }}" class="thumb pull-left">
                         <img class="img-thumbnail" src="{{eventoDep.imagen}}"></img>
                     </a>
                     <h2 class="post-tittle">
@@ -23,7 +23,6 @@
                     
                     <div class="contenedor-botones">
                         <br>
-                        <a href="#" class="btn btn-success">Comentar <span class="badge">20</span></a>
                          {% if is_granted("ROLE_ADMIN") %}
                         <a href="{{ path('evento_edit', { 'id': eventoDep.id }) }}" class="btn btn-primary">Editar</a>
                         {% endif %}

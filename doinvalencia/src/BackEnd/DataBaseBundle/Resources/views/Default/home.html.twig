@@ -15,7 +15,7 @@
                         </div>
                          {% for evento in eventos %}
                             <div class="item">
-                                <img href="{{ path('evento_show', { 'id': evento.id }) }}" src="{{evento.imagen}}"/>
+                                <a href="{{ path('evento_show', { 'id': evento.id }) }}"><img src="{{evento.imagen}}"/></a>
                                 <div class="carousel-caption">
                                     <h3>{{evento.nombre}}</h3>
                                 </div>

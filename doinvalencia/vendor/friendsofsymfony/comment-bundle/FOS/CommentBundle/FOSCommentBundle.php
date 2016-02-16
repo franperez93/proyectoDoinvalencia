@@ -19,7 +19,7 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
 /**
  * FOSCommentBundle
  */
-class FOSCommentBundle extends Bundle
+class FOSCommentBundle extends Bundle 
 {
     /**
      * {@inheritDoc}

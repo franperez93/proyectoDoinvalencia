@@ -16,9 +16,9 @@
                 </div>
                 <!-- Articulo 1-->
                 <article class="post clearfix">
-                        <a href="#" class="thumb">
+                        
                             <img class="img-thumbnail imagen" src="{{ evento.imagen}}"></img>
-                        </a>
+                        
                     <div class="panel panel-primary">
                         <div class="panel-heading">
                             <h2 class="post-tittle">{{ evento.nombre }}</h2>
@@ -34,13 +34,18 @@
                             <p><b>Hora del evento: </b>{{ evento.fecha|date('H:i:s') }}</p>
                         </div>    
                         <div class="panel-footer">
+                           
                             <div class="contenedor-botones">
-                                <a href="#" class="btn btn-success">Comentar <span class="badge">10</span></a>
-                                {% if is_granted("ROLE_ADMIN") %}
-                                    <a href="{{ path('evento_edit', { 'id': evento.id }) }}" class="btn btn-primary">Editar</a>
+                                 {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                                    <button class="btn btn-success" onclick="abrirComentarios()">Comentar</button>
+                                    {% if is_granted("ROLE_ADMIN") %}
+                                        <a href="{{ path('evento_edit', { 'id': evento.id }) }}" class="btn btn-info">Editar</a>
+                                    {% endif %} 
                                 {% endif %}
+                                
+                                <a class="btn btn-primary " href="javascript: void(0);" onclick="window.open('http://www.facebook.com/sharer.php?u={{ app.request.getUri }}','ventanacompartir', 'toolbar=0, status=0, width=650, height=450');">Compartir con Facebook</a>
                             </div> 
-                            <div id="comentarios">
+                            <div id="comentarios" hidden>
                                 {% include 'FOSCommentBundle:Thread:async.html.twig' with {'id': 'foo'} %}
                             </div>
                         </div>    
@@ -50,15 +55,12 @@
             </section>
             <!--Seccion secundaria Barra lateral-->
             <aside class="col-md-3 hidden-xd hidden-sm">
-                <h4>Proximos eventos</h4>
+                <h4>Evento</h4>
                 <a href="#" class="list-group-item">
                     <h4 class="list-group-item-heading">{{ evento.nombre }}</h4>
                     <p class="list-group-item-text"></p>
                 </a>
-                <a href="#" class="list-group-item">
-                    <h4 class="list-group-item-heading">Titulo de ejemplo 2</h4>
-                    <p class="list-group-item-text">como hacer un artiuclo de ejemplo 2</p>
-                </a>
+               
             </aside>
         </div>
     </section>
