@@ -16,11 +16,30 @@
         
             
             {{ form_start(delete_form) }}
-                <input class="btn btn-danger" type="submit" value="Eliminar">
+                <input class="btn btn-danger" type="submit" name="elim" value="Eliminar">
                 <a class="btn btn-info" href="{{ path('evento_index') }}">Volver a la lista</a>
             {{ form_end(delete_form) }}
             
         </div>   
 </div>            
      
+{% endblock %}
+
+{% block javascripts %}
+
+<script>
+    
+     $(document).ready(function(){
+        
+        $("input:text").prop("class","form-control").css('width','350px');
+        $("select").prop("class","form-control").css('width','350px');
+        $("#evento_reservas").prop("class","form-control");
+        $("#evento_reservasRestantes").prop("class","form-control");
+        $("#evento_tipoEventoId").prop("class","form-control");
+        
+        
+        
+     });    
+</script>
+
 {% endblock %}
