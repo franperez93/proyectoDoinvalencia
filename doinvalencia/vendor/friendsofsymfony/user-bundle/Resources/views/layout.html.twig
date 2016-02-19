@@ -98,31 +98,38 @@
                          <ul id="toggle">
                             <li>
                                 <div class="active border">
-                                    <span class="menu-icons fa fa-home"></span><a href="#">HOME</a>
+                                    <span class="menu-icons fa fa-home"></span><a href="{{ path('back_end_data_base_homepage') }}">HOME</a>
                                 </div>
                             </li>
                             <li>
                                 <div>
-                                    <span class="menu-icons fa fa-book"></span><a href="evento">EVENTOS</a>
+                                    <span class="menu-icons fa fa-book"></span><a href="{{ path('evento_index') }}">EVENTOS</a>
                                 </div>
                             </li>
                             <li>
                                 <div>
-                                    <span class="menu-icons fa fa-sort-amount-desc"></span>   <a href="#">CATEGORIAS</a>
+                                    <span class="menu-icons fa fa-sort-amount-desc"></span>   <a>CATEGORIAS</a>
                                     <span class="the-btn fa fa-plus"></span>
                                 </div>
                                     <ul>
                                         <li>
-                                            <a href="#">DEPORTES</a>
+                                            <a href="{{ path('categoria_hompage', { 'id': '1' }) }}">DEPORTIVOS</a>
                                         </li>
                                         <li>
-                                            <a href="#">MUSICA</a>
+                                            <a href="{{ path('categoria_hompage', { 'id': '2' }) }}">MUSICALES</a>
                                         </li>
                                         <li>
-                                            <a href="#">OCIO</a>
+                                            <a href="{{ path('categoria_hompage', { 'id': '3' }) }}">INFANTILES</a>
+                                        </li>
+                                        <li>
+                                            <a href="{{ path('categoria_hompage', { 'id': '4' }) }}">GASTRONOMICOS</a>
+                                        </li>
+                                        <li>
+                                            <a href="{{ path('categoria_hompage', { 'id': '5' }) }}">TECNOLOGICOS</a>
                                         </li>
                                     </ul>
                             </li> 
+                            <!-- SOBRE NOSOTROS (PENDIENTE...)
                             <li>
                                 <div>
                                     <span class="menu-icons  fa fa-rocket"></span>   <a href="#">ABOUT US</a>
@@ -134,24 +141,28 @@
                                         </li>
                                     </ul>
                             </li>
+                            !-->
                             <li>
                                 <div>
                                     <span class="menu-icons  fa fa-envelope"></span>
                                           <a href="#" data-toggle="modal" data-target="#contactoModal">CONTACT</a>
                                 </div>
                             </li>
-                            <li>
-                                <div>
-                                    <span class="menu-icons  fa fa-user"></span>
-                                          <a href="#">SIGN IN</a>
-                                </div>
-                            </li>
-                            <li>
-                                <div>
-                                    <span class="menu-icons fa fa-pencil"></span>
-                                          <a href="#">SIGN UP</a>
-                                </div>
-                            </li>
+                            {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                                <li>
+                                    <div>
+                                        <span class="menu-icons  fa fa-user"></span>
+                                              <a href="{{path('fos_user_profile_show')}}">SIGN IN</a>
+                                    </div>
+                                </li>
+                                {% else %}
+                                <li>
+                                    <div>
+                                        <span class="menu-icons fa fa-pencil"></span>
+                                              <a href="{{path('fos_user_security_login')}}">SIGN UP</a>
+                                    </div>
+                                </li>
+                            {% endif %}
                         </ul>
                  </div>
             </div>
