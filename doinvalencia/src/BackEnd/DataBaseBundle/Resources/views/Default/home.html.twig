@@ -11,11 +11,11 @@
                 <div class="carousel slide" id="home-carousel" data-ride="carousel">
                     <div class="carousel-inner">
                          <div class="item active">
-                            <img src="{{asset('bundles/dawplantilla/images/image3.jpg')}}" alt="image3" />
+                            <img id="imgCarruDefecto" src="{{asset('bundles/dawplantilla/images/Inicial.png')}}" alt="image3" />
                         </div>
                          {% for evento in eventos %}
                             <div class="item">
-                                <a href="{{ path('evento_show', { 'id': evento.id }) }}"><img src="{{evento.imagen}}"/></a>
+                                <a href="{{ path('evento_show', { 'id': evento.id }) }}"><img id="imgCarru" src="{{evento.imagen}}"/></a>
                                 <div class="carousel-caption">
                                     <h3>{{evento.nombre}}</h3>
                                 </div>

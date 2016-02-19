@@ -4,8 +4,7 @@
    
     <div class="jumbotron" id="jumboPerfil">
             <h2><b>Perfil de Usuario</b></h2>
-            <img class="img-circle" src="{{asset('bundles/dawplantilla/images/imagen.png')}}"></img>
-    
+            <img id="perfil" class="img-circle" src="{{user.salt}}"></img>
             <address>
 				<p><strong>{{ user.username }}</strong></p>
 			    <p>{{ user.email }}</p>
