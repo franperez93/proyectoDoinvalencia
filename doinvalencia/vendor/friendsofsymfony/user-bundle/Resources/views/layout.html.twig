@@ -53,10 +53,10 @@
                         <li><a href="{{ path('back_end_data_base_homepage') }}">Inicio</a></li>
                         <li><a href="{{ path('evento_index') }}">Eventos</a></li>
                         <li class="dropdown elementos">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" id="categoriasNavBar">
                             Categorias <span class="caret"></span>
                             </a>
-                            <ul class="dropdown-menu" role="menu">
+                            <ul class="dropdown-menu" role="menu" id="efectoNavBar">
                                 <li><a href="{{ path('categoria_hompage', { 'id': '1' }) }}">Deportivos</a></li>
                                 <li class="divider"></li>
                                 <li><a href="{{ path('categoria_hompage', { 'id': '2' }) }}">Musicales</a></li>
