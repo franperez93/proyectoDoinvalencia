@@ -1,16 +1,32 @@
 {% extends "FOSUserBundle::layout.html.twig" %}
 
 {% block body %}
+<div class="container">
     <h1>Evento creation</h1>
 
     {{ form_start(form) }}
         {{ form_widget(form) }}
-        <input type="submit" value="Create" />
+        <input class="btn btn-primary" type="submit" value="Crear Evento" />
     {{ form_end(form) }}
+        <br>
+        <a class="btn btn-info" href="{{ path('evento_index') }}">Volver a la lista</a>
+</div>    
+{% endblock %}
+{% block javascripts %}
 
-    <ul>
-        <li>
-            <a href="{{ path('evento_index') }}">Back to the list</a>
-        </li>
-    </ul>
+<script>
+    
+     $(document).ready(function(){
+        
+        $("input:text").prop("class","form-control").css('width','350px');
+        $("select").prop("class","form-control").css('width','95px').css('display','inline');
+        $("#evento_reservas").prop("class","form-control").css('width','90');
+        $("#evento_reservasRestantes").prop("class","form-control").css('width','90');
+        $("#evento_tipoEventoId").prop("class","form-control").css('width','90');
+        
+        
+        
+     });    
+</script>
+
 {% endblock %}

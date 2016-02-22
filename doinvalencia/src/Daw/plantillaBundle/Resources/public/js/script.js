@@ -1,3 +1,3 @@
 function abrirComentarios(){
-    $('#comentarios').slideDown(1000);
+    $('#comentarios').toggle(1000);
 }
