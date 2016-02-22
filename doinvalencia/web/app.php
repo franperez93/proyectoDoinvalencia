@@ -20,12 +20,7 @@ $apcLoader->register(true);
 
 $kernel = new AppKernel('prod', false);
 $kernel->loadClassCache();
-<<<<<<< HEAD
-//$kernel = new AppCache($kernel);
 $kernel = new AppKernel('dev', true); 
-=======
-$kernel = new appKernel('dev',true);
->>>>>>> 2076dd1fca1893ab0bc89d6200d74da6958143f0
 
 // When using the HttpCache, you need to call the method in your front controller instead of relying on the configuration parameter
 //Request::enableHttpMethodParameterOverride();
