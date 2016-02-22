@@ -152,14 +152,20 @@
                                 <li>
                                     <div>
                                         <span class="menu-icons  fa fa-user"></span>
-                                              <a href="{{path('fos_user_profile_show')}}">SIGN IN</a>
+                                              <a href="{{path('fos_user_profile_show')}}">PERFIL</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <span class="menu-icons  fa fa-user"></span>
+                                              <a href="{{ path('fos_user_security_logout') }}">SIGN OUT</a>
                                     </div>
                                 </li>
                                 {% else %}
                                 <li>
                                     <div>
                                         <span class="menu-icons fa fa-pencil"></span>
-                                              <a href="{{path('fos_user_security_login')}}">SIGN UP</a>
+                                              <a href="{{path('fos_user_security_login')}}">SIGN IN</a>
                                     </div>
                                 </li>
                             {% endif %}
@@ -228,13 +234,15 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-6">
-                    <p>Esto es el footer de la web</p> 
+                    <p>DoInValencia ® 2015-2016</p> 
                 </div>
                 <div class="col-xs-6">
                     <ul class="nav navbar fixed-bottom text-right lista-footer">
-                        <li><a href="#">prueba 1</a></li>
-                        <li><a href="#">prueba 2</a></li>
+                        <li>Desarrolladores:</li>
+                        <li><span><a href="https://github.com/franperez93">Fran Perez</a></span> -- <span><a href="https://github.com/emilioheras">Emilio Heras</a></span> </li>
+                        <li><span><a href="https://github.com/victorvte">Victor Vicente</a></span> -- <span><a href="https://github.com/RauCompanyBravo">Raul Bravo</a></span></li>
                     </ul> 
+                    
                 </div>
             </div>
         </div>
